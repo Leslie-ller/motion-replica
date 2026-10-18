@@ -1,0 +1,253 @@
+<title>motion-replica</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+/* One editorial column. The synced players are styled like an AE comp panel with a timecode scrubber. */
+:root{
+  --bg:#f3f4f7; --panel:#ffffff; --ink:#191c25; --muted:#5d6475; --line:#d9dce4; --wash:#e8eaf0;
+  --accent:#4a55d6; --quote:#eef0fb;
+  --f-display:"Bricolage Grotesque","Noto Sans SC","PingFang SC",system-ui,sans-serif;
+  --f-body:"Noto Sans SC","PingFang SC","Hiragino Sans GB",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12141b; --panel:#1b1e28; --ink:#e8eaf1; --muted:#9aa1b3; --line:#2e3240; --wash:#232735;
+  --accent:#8e97ff; --quote:#22263a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12141b; --panel:#1b1e28; --ink:#e8eaf1; --muted:#9aa1b3; --line:#2e3240; --wash:#232735;
+  --accent:#8e97ff; --quote:#22263a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:60px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.12}
+h2{font-size:24px;font-weight:600}
+h3{font-size:16px;font-weight:600}
+p{margin:0;max-width:68ch}
+code{font-family:var(--f-mono);font-size:.9em;background:var(--wash);padding:1px 5px;border-radius:4px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:17px;color:var(--muted)}
+header,section{display:grid;gap:18px;min-width:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.note{font-size:13px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.fact{border-top:2px solid var(--ink);padding-top:10px;display:grid;gap:2px;align-content:start}
+.fact b{font-family:var(--f-mono);font-size:24px;font-weight:500}
+.fact span{color:var(--muted);font-size:13px}
+.comp{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:14px;min-width:0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tabs button{font:inherit;font-size:14px;border:1px solid var(--line);background:transparent;color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stage{display:grid;gap:12px;grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+.cell{display:grid;gap:6px;min-width:0;align-content:start}
+.cell h3{font-family:var(--f-body);font-size:13px;font-weight:700}
+.cell canvas{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:6px;display:block}
+.transport{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.transport button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--wash);color:var(--ink);border-radius:6px;padding:4px 12px;cursor:pointer;min-width:64px}
+.transport input{flex:1;min-width:140px;accent-color:var(--accent)}
+.tc{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500;font-family:var(--f-mono)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;counter-reset:step}
+.flow div{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--panel);font-size:13px;display:grid;gap:2px;align-content:start;counter-increment:step}
+.flow b{font-size:14px}
+.flow b::before{content:counter(step) "  ";font-family:var(--f-mono);color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start}
+.card p{font-size:14px}
+figure{margin:0;display:grid;gap:8px;min-width:0}
+figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+figcaption{font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.two > *{min-width:0}
+blockquote{margin:0;background:var(--quote);border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 6px 6px 0;font-size:13px;font-family:var(--f-mono);line-height:1.55}
+.steps{display:grid;gap:10px}
+.step{display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.step .v{font-family:var(--f-mono);font-size:18px;font-weight:500;color:var(--accent)}
+.step div{display:grid;gap:6px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left}
+thead th{font-weight:500;color:var(--muted);font-size:13px}
+ul{margin:0;padding-left:1.2em;max-width:72ch;display:grid;gap:8px}
+footer{font-size:13px;color:var(--muted);display:grid;gap:4px}
+@media (max-width:720px){.two{grid-template-columns:1fr}.stage{grid-template-columns:repeat(min(var(--n),2),minmax(0,1fr))}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">motion-replica · 2026.09 · Agent 应用</div>
+  <h1>看着一段 AE 动效，让 Agent 把它重做出来</h1>
+  <p class="lede">主 Agent 只拿到参考动效的画面，写出一份能编译回 After Effects 的 Lottie 动画。另一个独立的检查 Agent（同一个模型、全新会话）只看画面，告诉它哪里不像、差在哪段时间。整个闭环里没有分数。</p>
+  <div class="facts">
+    <div class="fact"><b>~10 ms</b><span>预览渲染一帧；迭代时不开 AE，交付后才编译一次</span></div>
+    <div class="fact"><b>0.82 / 255</b><span>参考答案 438 帧里，预览与 AE 单帧平均像素差的最大值</span></div>
+    <div class="fact"><b>0.13 / 255</b><span>47 个模型写的动画编译进 AE 后，与预览的平均像素差（中位数）</span></div>
+  </div>
+</header>
+
+<section aria-labelledby="h-res">
+  <h2 id="h-res">目标与结果</h2>
+  <div class="comp">
+    <div class="tabs" id="res-tabs" role="group" aria-label="选择动效"></div>
+    <div class="stage" id="res-stage" style="--n:2"></div>
+    <div class="transport" id="res-transport"></div>
+    <div class="meta" id="res-meta"></div>
+  </div>
+  <p class="note">左边是 After Effects 渲染的目标，右边是 Agent 交付的动画。画面同步播放，打开时停在最后一帧，每轮在最后一帧停 1.5 秒。模型是 DeepSeek V4.1 Flash，经 Devin 客户端调用，禁用全部工具。三个结果是从同一框架的多次运行里挑出来的；浏览器窗口用的是当前代码，奖杯和叉号跑在加入“自动完整检查”之前。</p>
+</section>
+
+<section aria-labelledby="h-how">
+  <h2 id="h-how">怎么工作</h2>
+  <div class="flow">
+    <div><b>看目标</b><span>概览图、48 帧胶片图、每种颜色元素的运动曲线。</span></div>
+    <div><b>写动画</b><span>主 Agent 用 <code>set_ir</code> 整体写入，或用 <code>patch_ir</code>（JSON Patch）局部修改。</span></div>
+    <div><b>子集校验</b><span>超出子集直接拒绝，报错带 JSON Pointer，如 <code>/layers/3/ks/p</code>。</span></div>
+    <div><b>毫秒级预览</b><span>常驻 headless Chrome + lottie-web；<code>preview</code> 给出 目标 / 当前 / 差异热图。</span></div>
+    <div><b>检查 Agent</b><span>每次修改后快检；关键节点做完整检查，可放大任意 1 秒逐帧看。</span></div>
+    <div><b>交付进 AE</b><span>最终动画用验证过的构建器编译成 AE 工程，逐帧渲染。</span></div>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>能精确回到 AE 的格式</h3><p>Agent 写的是 Lottie 的一个子集：形状图层、路径、填充描边、嵌套组、图层变换关键帧和三次缓动。每一项都在 AE 里逐项验证过，构建器把 Lottie 缓动精确换算成 AE 的 speed / influence。</p></div>
+    <div class="card"><h3>用看图代替分数</h3><p>早期版本把像素指标、形状指标当作闭环反馈，Agent 会去优化指标本身：画面明显不对，分数依然很高。现在的反馈全部来自画面，检查 Agent 看不到 IR、看不到主 Agent 的对话，也没有分数可看。</p></div>
+    <div class="card"><h3>只许用规定动作</h3><p>客户端以 Ask 模式启动、禁用全部内置工具，模型只能在回复里写 JSON 动作。主 Agent 一旦发起工具调用，这次运行作废；检查 Agent 调工具或把工具调用写成文本，就换一个新会话重答。</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-checker">
+  <h2 id="h-checker">检查 Agent 看到什么</h2>
+  <div class="two">
+    <figure>
+      <img src="img/checker_quick.webp" alt="快检胶片图：目标、上一版、这一版三行，16 个时间点" loading="lazy">
+      <figcaption><b>快检</b>：每次修改被接受后自动触发，不占动作数。三行是目标、上一版、这一版。</figcaption>
+      <blockquote>Yours is closer to the target than previous: the card now goes dark and scales to full size by 1.20s … CHANGE: better<br>1. Skeleton rows appear too early — 1.96s–2.76s … Target adds one row per ~0.4s and finishes ~4.0s.</blockquote>
+    </figure>
+    <figure>
+      <img src="img/checker_curves.webp" alt="运动曲线：每种颜色元素的面积、x、y 随时间变化，粗线为目标，细黑线为当前版本" loading="lazy">
+      <figcaption><b>完整检查</b>：48 帧胶片图加运动曲线。每种颜色一行，依次是面积、x、y 随时间的变化；粗彩线是目标，细黑线是当前版本。从第 12 步起自动触发一次，临近结束再触发一次。</figcaption>
+      <blockquote>Coloured text bars … yours runs ~0.12–0.24 s ahead. Motion chart confirms: yours' (thin black) blue/teal/red visible-size curves start rising ~0.2–0.3 s before target's thick curves.</blockquote>
+    </figure>
+  </div>
+</section>
+
+<section aria-labelledby="h-iter">
+  <h2 id="h-iter">一次迭代：浏览器窗口</h2>
+  <div class="comp">
+    <div class="stage" id="it-stage" style="--n:5"></div>
+    <div class="transport" id="it-transport"></div>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="v">v1</span><div><p>只画出了圆点和几根贴边的细条。</p><blockquote>yours never draws the card at all … target grows a dark navy rounded rect from ~0.80s</blockquote></div></div>
+    <div class="step"><span class="v">v4</span><div><p>按快检意见补出面板、标题条和代码条。快检判断变好，但代码条出得太早。</p><blockquote>Skeleton rows appear too early … Target adds one row per ~0.4s</blockquote></div></div>
+    <div class="step"><span class="v">v8</span><div><p>第 12 步自动完整检查。检查 Agent 先请求放大 1.00–2.00 s 逐帧看，再结合运动曲线指出面板淡入和代码条的时间问题。</p><blockquote>yours starts ~0.2 s too early and darkens too gradually … coloured text bars: yours runs ~0.12–0.24 s ahead</blockquote></div></div>
+    <div class="step"><span class="v">v15</span><div><p>之后全部用 <code>patch_ir</code> 小步修改：标题条和第一行代码条的出现时间对上目标，后面几行的节奏放慢、更接近目标。第 23 步交付。</p></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-ae">
+  <h2 id="h-ae">预览与 AE 的还原度</h2>
+  <p>迭代全靠预览，前提是预览和 AE 画出来的一样。lottie-web 和 AE 对同一份 Lottie 的求值并不完全相同：比如位置动画的空间切线与运动方向共线时，lottie-web 会丢掉切线、改成逐维插值，AE 始终沿空间曲线按弧长推进，遇到回弹、过冲就画得不一样。预览前把这类段的出切线沿法向推开 0.01 px，送进 AE 的动画不变；奖杯最差一帧的平均差从 0.77 降到 0.17（/255）。</p>
+  <div class="two">
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>参考答案</th><th>帧数</th><th>单帧平均差 最大</th><th>中位</th><th>差异 &gt;40 的像素 最多</th></tr></thead>
+        <tbody>
+          <tr><td>加载波浪</td><td>40</td><td>0.10</td><td>0.10</td><td>0.10%</td></tr>
+          <tr><td>浏览器窗口</td><td>149</td><td>0.34</td><td>0.28</td><td>0.06%</td></tr>
+          <tr><td>叉号弹出</td><td>120</td><td>0.15</td><td>0.11</td><td>0.11%</td></tr>
+          <tr><td>圆形旗帜</td><td>69</td><td>0.82</td><td>0.51</td><td>0.37%</td></tr>
+          <tr><td>奖杯</td><td>60</td><td>0.17</td><td>0.09</td><td>0.27%</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">像素差按 0–255 计。参考答案在预览里渲染，与 AE 26 渲染的参考帧逐帧比较。<br>另有 47 个由模型写出、交付后编译进 AE 的动画（4111 帧）：每个动画的平均差中位数 0.13，最大 0.62；最差的单帧 1.3，差异超过 40 的像素最多占 0.67%。<br>这些是这几个任务上的观测结果，不是任意动画都等价的证明。</p>
+    </div>
+    <figure>
+      <img src="img/preview_vs_ae.webp" alt="每个任务差异最大的一帧：AE、预览、差异放大 10 倍" loading="lazy">
+      <figcaption>每个任务差异最大的一帧，差异放大 10 倍。剩下的只有形状边缘的单像素抗锯齿。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section aria-labelledby="h-lim">
+  <h2 id="h-lim">局限</h2>
+  <ul>
+    <li><b>结果不稳定。</b>同一个任务多次运行，质量差别很大；同一框架下浏览器窗口跑了 3 次，其中一次面板偏出了画布。</li>
+    <li><b>主 Agent 前期爱整段重写。</b>第一次完整检查之前常常反复 <code>set_ir</code> 重写，检查之后才转成按意见 <code>patch_ir</code>。</li>
+    <li><b>子集有边界。</b>圆形旗帜要用路径一块块画出被圆裁切的扇形；子集不提供蒙版，Agent 算不出这种几何，只画出了方形旗帜。</li>
+    <li><b>检查有成本。</b>一次运行 13–21 分钟（上限 25 分钟），其中检查 Agent 占 6–10 分钟。</li>
+  </ul>
+</section>
+
+<footer>
+  <span>参考动效：airbnb/lottie-android 的 snapshot-tests（仓库 Apache-2.0），原作者为 LottieFiles 创作者。参考帧是参考答案在 After Effects 26 里的真实渲染。</span>
+  <span>每一版动画、每一次检查的图片和原话、主 Agent 的逐步对话都保存在项目的 results/ 目录。</span>
+</footer>
+</div>
+
+<script>
+const DATA = __DATA__;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const sheets = {};
+function loadSheet(src, onload){ if(!sheets[src]){ const im = new Image(); im.src = src; sheets[src] = im; } sheets[src].addEventListener('load', onload); return sheets[src]; }
+
+/* A synced player: several sprite sheets with the same frame grid, one transport. */
+function Player(stage, transport){
+  const p = {task:null, frame:0, playing:!reduced, last:0, canvases:[]};
+  transport.innerHTML = '<button type="button">暂停</button><input type="range" min="0" value="0" aria-label="时间"><span class="tc">00:00:00:00</span>';
+  const [btn, scrub, tc] = transport.children;
+  btn.textContent = p.playing ? '暂停' : '播放';
+  btn.onclick = () => { p.playing = !p.playing; btn.textContent = p.playing ? '暂停' : '播放'; };
+  scrub.oninput = () => { p.playing = false; btn.textContent = '播放'; p.frame = +scrub.value; p.draw(); };
+  p.load = (task, cells) => {
+    p.task = task; p.frame = task.n - 1; p.canvases = []; stage.innerHTML = '';
+    stage.style.setProperty('--n', cells.length);
+    for(const [label, src] of cells){
+      const d = document.createElement('div'); d.className = 'cell';
+      const h = document.createElement('h3'); h.textContent = label;
+      const c = document.createElement('canvas'); c.width = task.w; c.height = task.h; c.dataset.src = src;
+      c.setAttribute('role', 'img'); c.setAttribute('aria-label', label);
+      loadSheet(src, p.draw); d.append(h, c); stage.append(d); p.canvases.push(c);
+    }
+    scrub.max = task.n - 1; p.draw();
+  };
+  p.draw = () => {
+    const t = p.task; if(!t) return;
+    for(const c of p.canvases){
+      const im = sheets[c.dataset.src]; if(!im || !im.complete || !im.naturalWidth) continue;
+      c.getContext('2d').drawImage(im, (p.frame % t.cols)*t.w, Math.floor(p.frame/t.cols)*t.h, t.w, t.h, 0, 0, t.w, t.h);
+    }
+    scrub.value = p.frame;
+    const fps = Math.round(t.fps), sec = Math.floor(p.frame/t.fps), ff = Math.round(p.frame - sec*t.fps) % Math.max(fps,1);
+    tc.textContent = `00:00:${String(sec).padStart(2,'0')}:${String(ff).padStart(2,'0')}`;
+  };
+  p.tick = ts => {
+    const t = p.task;
+    if(p.playing && t && ts - p.last >= (p.frame === t.n - 1 ? 1500 : 1000/t.fps)){ p.last = ts; p.frame = (p.frame + 1) % t.n; p.draw(); }
+  };
+  return p;
+}
+
+/* results */
+const res = Player(document.getElementById('res-stage'), document.getElementById('res-transport'));
+const tabs = document.getElementById('res-tabs'), meta = document.getElementById('res-meta');
+const ENDED = {finish:'自己交付', budget:'用完动作预算', deadline:'到时限'};
+function selectTask(t){
+  [...tabs.children].forEach(b => b.setAttribute('aria-pressed', b.dataset.id === t.id));
+  res.load(t, [['目标（After Effects）', t.target], ['Agent 结果', t.result]]);
+  meta.innerHTML = `<span><b>${t.frames}</b> 帧 · <b>${t.duration.toFixed(2)}</b> s</span><span><b>${t.actions}</b> 步 · ${ENDED[t.ended] || t.ended}</span>`
+    + `<span><b>${t.versions}</b> 个版本</span><span><b>${t.quick}</b> 次快检 · <b>${t.reviews}</b> 次完整检查</span>`;
+}
+DATA.tasks.forEach(t => { const b = document.createElement('button'); b.type = 'button'; b.textContent = t.name; b.dataset.id = t.id; b.onclick = () => selectTask(t); tabs.append(b); });
+selectTask(DATA.tasks.find(t => '#' + t.id === location.hash) || DATA.tasks[0]);
+
+/* iterations */
+const it = Player(document.getElementById('it-stage'), document.getElementById('it-transport'));
+const I = DATA.iterations;
+it.load(I, [['目标', I.target], ...I.versions.map(v => ['v' + v.v, v.sprite])]);
+
+function loop(ts){ res.tick(ts); it.tick(ts); requestAnimationFrame(loop); }
+requestAnimationFrame(loop);
+</script>
