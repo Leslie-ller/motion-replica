@@ -34,9 +34,9 @@ def mean_abs_diff(a_path, a_premultiplied, b_path, b_premultiplied):
     return float(np.abs(a - b).mean())
 
 
-def heatmap(a, b):
+def heatmap(a, b, gain=3):
     """Max channel difference of two RGB arrays: black = identical, yellow/white = large mismatch."""
-    d = np.clip(np.abs(a.astype(np.float32) - b.astype(np.float32)).max(2) / 255 * 3, 0, 1)
+    d = np.clip(np.abs(a.astype(np.float32) - b.astype(np.float32)).max(2) / 255 * gain, 0, 1)
     rgb = np.stack([np.clip(d * 2, 0, 1), np.clip(d * 2 - 0.5, 0, 1), np.clip(d * 3 - 2, 0, 1)], 2)
     return (rgb * 255).astype(np.uint8)
 

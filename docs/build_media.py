@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Render the README media from results/: per-run filmstrips, target-vs-result GIFs and the iteration strip.
+"""Render the README media: per-run filmstrips, target-vs-result GIFs, the iteration strip, and the
+preview-vs-AE check on the reference answers (with its numbers printed as a Markdown table).
 
     python3 docs/build_media.py
 """
@@ -59,6 +60,23 @@ def save_gif(frames, fps, out):
     frames[0].save(out, save_all=True, append_images=frames[1:], duration=int(1000 * step / fps), loop=0, optimize=True)
 
 
+def preview_vs_ae(proxy, scratch):
+    """Render each task's reference answer in the preview and compare it with the AE-rendered reference frames."""
+    rows, lines = [], ['| 任务 | 帧数 | 单帧平均差 最大 | 中位 | 差异 >40 的像素 最多 |', '|---|---:|---:|---:|---:|']
+    for task in ('material_wave_loading', 'browser', 'x_pop', 'uk', 'trophy'):
+        info, times, target = task_frames(task)
+        answer = json.loads((ROOT / 'tasks' / task / 'hidden/answer.json').read_text())
+        frames = render(proxy, answer, info, times, scratch / f'answer_{task}')
+        diffs = [np.abs(t.astype(np.float32) - f.astype(np.float32)) for t, f in zip(target, frames)]
+        maes = [d.mean() for d in diffs]
+        big = [(d.max(2) > 40).mean() for d in diffs]
+        lines.append(f'| {task} | {len(times)} | {max(maes):.2f} | {np.median(maes):.2f} | {max(big) * 100:.2f}% |')
+        i = int(np.argmax(maes))  # the worst frame of this task
+        rows.append((f'{task.replace("material_wave_loading", "wave")}\n{times[i]:.2f}s', [target[i], frames[i], pictures.heatmap(target[i], frames[i], gain=10)]))
+    pictures.sheet(rows, ['After Effects', 'preview', 'difference x10'], MEDIA / 'preview_vs_ae.png', cell=170)
+    print('\n'.join(lines))
+
+
 def main():
     MEDIA.mkdir(parents=True, exist_ok=True)
     tmp = tempfile.TemporaryDirectory(prefix='motion-replica-media-')
@@ -84,6 +102,7 @@ def main():
             rows.append((f'v{v}', frames))
         pictures.filmstrip(rows, [times[i] for i in idx], MEDIA / f'{task}_iterations.png', max_cells=8)
         print('rendered iteration strip')
+        preview_vs_ae(proxy, scratch)
     finally:
         proxy.close()
         tmp.cleanup()
