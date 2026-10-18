@@ -1,0 +1,6 @@
+Yours is about the same as previous: the t=0.00 dashed ring is gone (now a small blob, nearer the target's tiny plus), but new translucent pink ghosting appears through 0.13–0.53s and the early growth is still off. CHANGE: same
+
+- Plus/cross shape, 0.13–0.40s (center ~(150,150), arms ±55 px): yours draws a scattered translucent pink square cluster / double image; target is one flat opaque red cross, already grown to near-full size by 0.13s.
+- Rotation, 0.40s (center ~(150,150)): yours is ~40° into the turn (reads as an X); target is still an upright plus tilted only ~15–20°, reaching X at 0.53s. Previous was fully 45° here, so this improved slightly but is still early.
+- Scale, 0.13s (center ~(150,150), arms ±30 px): yours is far smaller and fainter than the target's large blurred plus; target has ~80% of final size by 0.13s, yours only ~50%.
+- Start, 0.00s (center ~(150,150), ~±12 px): yours is a soft pink blob/star; target is a crisp small red plus.

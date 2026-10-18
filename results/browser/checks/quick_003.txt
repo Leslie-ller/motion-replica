@@ -1,0 +1,5 @@
+Yours is further from the target than "previous": the 0.40 s placeholder now has the right size/inset (that got better), but the card fill at 1.20 s and the first content lines at 2.76 s got worse. CHANGE: worse
+
+- Window card, 0.72–1.30 s: target is already a solid dark navy panel with its three window dots by 0.80 s; yours is still a light-grey panel with a grey bar along the bottom at 0.80 s, and at 1.20 s only the upper part (y≈30–135) is dark — the fill lands ~0.4 s late and non-uniformly. Target: uniformly dark card from 0.80 s on.
+- Blue content line, 2.36–3.16 s: target grows a blue bar at y≈112 from x≈62 out to x≈165 by 2.76 s; yours at 2.76 s shows only a stub red line plus a stray green tick at x≈62, y≈100, with no blue bar until ≈3.16 s.
+- Content lines, 3.16–3.96 s: target already has 4 bars under the white title bar at 3.16 s and 5 by 3.96 s; yours carries one fewer bar across that window, so the block fills ~0.4 s behind.

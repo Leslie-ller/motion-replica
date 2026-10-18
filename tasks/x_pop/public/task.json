@@ -1,0 +1,11 @@
+{
+  "w": 300,
+  "h": 300,
+  "fr": 60,
+  "ip": 0,
+  "op": 120,
+  "id": "x_pop",
+  "frames": 120,
+  "duration": 2.0,
+  "background": "white"
+}

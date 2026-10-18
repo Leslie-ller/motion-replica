@@ -1,0 +1,5 @@
+"Yours" is closer to the target than "previous": it now shows the star-emblem goblet silhouette and an actual sparkle burst (previous stayed a plain wide scalloped chalice with no burst at all), but the rise and burst still run late. CHANGE: better
+
+1. Rise shape/timing (0.13–0.80 s): target grows as a narrow vertical form — thin sliver near x≈270 y≈300 at 0.13 s, small tower y≈270–330 at 0.40 s, cup x≈230–320 y≈170–360 by 0.53 s. Yours is still a flat wide blob at 0.27–0.40 s and only a short cup (x≈240–310, y≈300–360) at 0.53–0.67 s, so the cup reaches full height ~0.2 s late.
+2. Sparkle burst (0.80–1.43 s): target stars pop at 0.80 s, spread widest x≈180–370 / y≈100–250 at 0.93–1.03 s, and are gone by 1.17 s. Yours starts ~1.03 s, peaks 1.03–1.17 s, fades by ~1.43 s, and only spreads x≈230–320 — late and too tight around the cup.
+3. Settled emblem/proportions (1.43–2.00 s): target keeps a crisp star cut into the bowl (x≈250–300, y≈150–200) with a flared rim and taller stem; yours settles into a plainer, narrower cup whose star is faint/almost gone and whose rim flares less.

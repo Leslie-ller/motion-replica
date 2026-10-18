@@ -1,0 +1,6 @@
+**Verdict:** Yours is slightly further from the target than previous — the 0.00 s ring got closer in *form* (dotted rather than solid) but is now too faint, and the 0.13 s cell lost the previous version's roughly circular spread in favor of a wrong-shaped horizontal pill. CHANGE: worse
+
+1. Ring, 0.00–0.07 s — yours is a barely visible 4–5 dot ring (~24 px dia) at (150,150); target is a clearly readable red dotted ring ~29 px dia with ~9 dots and a couple offset specks.
+2. Particle burst, 0.10–0.20 s — yours condenses into a compact horizontal dot capsule ~55×15 px centered at (150,150); target instead throws dots over a ~80 px area in all directions, loosely tracing the future cross arms, with one denser blob offset up-left of center.
+3. Cloud→solid handoff, ~0.20–0.27 s — yours' dots disappear abruptly and a clean plus pops in; target's cloud keeps contracting along the arm axes so the dots merge into the plus arms instead of vanishing.
+4. Stable phase 0.27–2.00 s (plus → tilted plus → X) — essentially matches; no material difference found.

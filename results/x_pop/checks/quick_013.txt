@@ -1,0 +1,7 @@
+CHANGE: same — "yours" and "previous" are near-identical in this strip; yours has a slightly crisper mid-morph asterisk, but the timing and the opening frame are no closer to the target than before, so no net gain.
+
+1. Seed/opening frame, 0.00–0.13 s: target starts with a clearly visible pink dotted ring (≈10 px radius around x150,y150) that blooms into a dense ~6-arm pink sparkle; yours starts as a tiny, nearly invisible ring (≈2–3 px) and jumps to a sparser, more regular 8-arm star.
+2. Rotation timing, 0.27–0.40 s: target still shows a thick, almost axis-aligned plus at 0.27 s and only tilts ~25–30° by 0.40 s; yours is already tilted at 0.27 s and reads as a full X by 0.40 s — rotation runs roughly 0.1 s ahead.
+3. Mid-morph color, 0.13–0.40 s: target's morphing shape is a lighter, softer pink-red (light center, thin arms); yours stays saturated dark red with heavier arms through the same window.
+
+Everything from 0.53 s to 2.00 s matches the target well (arm angle, length and stroke weight all read the same).

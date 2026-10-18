@@ -1,0 +1,5 @@
+Yours is further from the target than previous: the opening dot-morph is a different glyph entirely, while previous at least matched the ring and the upright plus. CHANGE: worse
+
+- Start glyph (0.00–0.05s, x132–168 / y132–168): yours is a pink 8-point starburst with radiating strokes; target is a ring of ~6–8 discrete round dots, ~35px across, centered (150,150).
+- Dot layout (0.10–0.20s, x88–212 / y88–212): yours keeps 8 radial spokes (asterisk); target's dots migrate onto a vertical + horizontal axis, reading as a plus-shaped scatter by 0.13s.
+- Rotation/arms (0.20–0.45s, x85–215 / y85–215): yours' plus is already tilted ~15° CW at 0.27s with unequal arm lengths; target stays upright through 0.27s (vertical arm longer) and only begins rotating after 0.27s, reaching ~20° CW at 0.40s.

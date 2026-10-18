@@ -1,0 +1,6 @@
+"yours" is closer to the target than "previous": the 0.27–0.53s morph now passes through a rotated plus before reaching the X (previous jumped to a bold X at 0.40s), and the particle intro is no longer a solid blob. Remaining issues are weight and intro timing. CHANGE: better
+
+- Particles, 0.00–0.27s: target's dots stay a loose, slightly diagonal cloud offset below-left of centre (x≈110–190, y≈110–175) and only close into the plus near 0.27s; yours snap into a clean, axis-aligned plus outline already at 0.13s — assembly is too early and too tidy.
+- Bar weight, 0.27–2.00s: target's arms are ~28–32 px wide; yours are ~40–45 px, so both the plus and the final X read distinctly heavier/bolder than the target.
+- Start ring, 0.00s: target opens with a tight dashed circle of ~10 short square dashes (radius ≈12 px around 150,150); yours is a larger, finer dotted ring (radius ≈18 px) with many tiny round dots, so the intro reads as a different mark.
+- Final pose, 0.53–2.00s: target's X keeps a slight residual tilt/drift (arms a few degrees off 45°); yours locks to a perfectly symmetric 45° X and holds it.

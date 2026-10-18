@@ -1,0 +1,5 @@
+"yours" is closer to the target than "previous": the stray white square artifact at the card's top-left (1.96–2.36s) is gone, the 0.80–1.56s dark panel now reaches the target's size, and the late row stack is no longer over-filled. CHANGE: better
+
+1. Header bar geometry — 1.96–2.76s — "yours" white bar is left-shifted and thicker (x≈55–180, y≈112–124); target keeps a centered thin bar at x≈95–215, y≈115–122.
+2. Row reveal timing — 2.36–2.76s — "yours" already shows a green row/dot (x≈70–90, y≈158) while the target still has only red (x≈70–105) and blue (x≈70–130) rows; green should first appear at 3.16s.
+3. Late stack extent — 3.96–5.92s — "yours" rows stop ~10px short on the right (end x≈180 vs target x≈205) and the 4th–5th rows sit ~6px high, so the target's fuller, evenly spaced stack isn't matched.

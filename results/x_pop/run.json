@@ -1,0 +1,22 @@
+{
+  "task": "x_pop",
+  "model": "deepseek-v4-1-flash-high (Devin, tools disabled)",
+  "condition": "loop",
+  "code": "before automatic full reviews were added",
+  "ended": "finish",
+  "actions_used": 24,
+  "versions": 21,
+  "wall_seconds": 780.9,
+  "stats": {
+    "actions": {
+      "set_ir": 20,
+      "patch_ir": 1,
+      "preview": 2,
+      "finish": 1
+    },
+    "invalid_actions": 0,
+    "previews": 2,
+    "quick_checks": 21,
+    "checker_seconds": 383.4
+  }
+}

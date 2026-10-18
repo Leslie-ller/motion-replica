@@ -1,0 +1,5 @@
+Yours is closer to the target than previous: the cup now reads as a real trophy (taller body + visible star) instead of previous's squat bowl, and the growth shape at 0.40s matches better — but it is still too narrow and the burst particles are too weak. CHANGE: better
+
+- Trophy silhouette, 0.53s–1.97s: yours' cup is narrow/tall (body ≈ x 195–355, thin stem, small foot); target's cup is much wider with flared side handles and a broad pedestal (≈ x 150–400, y 90–330).
+- Sparkle burst, 0.53s–1.43s: yours' sparkles are small and clustered low near the base/rim; target throws a large 4-point sparkle plus several small stars spread around the whole trophy, widest at 0.80s–1.03s, then fading to nothing by ≈1.57s.
+- Growth ramp, 0.40s–0.80s: yours is still about half-width at 0.53s and only reaches full size at ≈0.80s; target is already ~70–80% width at 0.53s and full size by 0.80s.

@@ -1,0 +1,23 @@
+{
+  "task": "trophy",
+  "model": "deepseek-v4-1-flash-high (Devin, tools disabled)",
+  "condition": "loop",
+  "code": "before automatic full reviews were added",
+  "ended": "budget",
+  "actions_used": 24,
+  "versions": 15,
+  "wall_seconds": 1256.2,
+  "stats": {
+    "actions": {
+      "set_ir": 11,
+      "preview": 4,
+      "patch_ir": 4,
+      "finish": 1
+    },
+    "invalid_actions": 4,
+    "previews": 4,
+    "quick_checks": 15,
+    "finish_reminders": 1,
+    "checker_seconds": 348.7
+  }
+}

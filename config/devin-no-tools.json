@@ -1,0 +1,51 @@
+{
+  "disabled_tools": [
+    "read",
+    "grep",
+    "glob",
+    "exec",
+    "edit",
+    "write",
+    "webfetch",
+    "web_search",
+    "todo",
+    "view_image",
+    "ask_user_question",
+    "exit_plan_mode",
+    "notebook_read",
+    "notebook_edit",
+    "kill_shell",
+    "exec_output",
+    "write_to_process",
+    "find_code_context",
+    "update_plan",
+    "browser_preview",
+    "close_browser_preview",
+    "request_scope",
+    "subagent",
+    "skill",
+    "find_file_by_name",
+    "get_output",
+    "todo_write",
+    "mcp_list_tools",
+    "mcp_call_tool",
+    "run_subagent"
+  ],
+  "permissions": {
+    "deny": [
+      "read",
+      "edit",
+      "grep",
+      "glob",
+      "exec",
+      "Read(/**)",
+      "Write(/**)",
+      "Fetch(*)",
+      "mcp__*"
+    ]
+  },
+  "agent": {
+    "subagents_enabled": false
+  },
+  "version": 1
+}

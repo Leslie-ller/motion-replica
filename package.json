@@ -1,0 +1,9 @@
+{
+  "name": "motion-replica",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "lottie-web": "5.13.0",
+    "puppeteer-core": "24.43.1"
+  }
+}

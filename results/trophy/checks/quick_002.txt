@@ -1,0 +1,6 @@
+Yours is about as close as "previous": it now hits the right event sequence (rise → star pop → settle) and the settled end state matches, but it trades previous's undersized stars for a massively oversized burst, so the net error is comparable. CHANGE: same
+
+1. Star burst scale — yours 0.80–1.30 s: 5–6 stars ≈70–90 px across (x≈200–350, y≈150–260) overlapping into a solid halo; target keeps 3 stars ≈30 px each, clearly separated, x≈240–315 / y≈165–220.
+2. Burst onset/peak — yours is at full size by 0.80 s and already shrinking at 1.03 s; target ramps 0.67→1.03 s and peaks at ≈1.03 s (about 0.2 s later), with the trophy still readable beneath the stars.
+3. Rise start / height — yours is blank at 0.13–0.27 s and only a small cup at 0.40 s (x≈275, y≈205–225); target already shows a thin sliver at 0.13 s and a half-height body by 0.27–0.40 s (x≈275, y≈195–220), so it rises ~0.15 s earlier and taller.
+4. Trophy overshoot — yours 0.80–1.17 s: cup renders noticeably larger/bolder than the target's at the same times; target's cup stays the same size through the burst.

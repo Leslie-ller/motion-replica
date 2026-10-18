@@ -1,0 +1,6 @@
+yours is closer to target than previous — the 0.27s pose is now the upright red "+" the target has (previous was already rotated ~35° toward X), and 0.53–2.00s is a clean, correctly-timed X; the pre-roll sparkle and the 0.40s turn are still off. CHANGE: better
+
+- Sparkle pre-roll, 0.00–0.20s, ~(150,150): yours pops a dense, round, saturated multi-spoke pink burst; target grows from a much smaller/fainter dashed mark at 0.00s (r≈10–15px vs yours ≈25–30px) into a thin, pale, diagonally-oriented asterisk with scattered specks.
+- Plus→X rotation, 0.27–0.53s, ~(150,150): yours turns too early/fast — by 0.40s it already reads as a ~40° X; the target is still a near-upright "+" with one shortened arm at 0.40s and only reaches the 45° X at ~0.53s.
+- Mid-turn geometry, 0.35–0.50s: target's cross has unequal arms (a short stub on one arm) while turning; yours keeps four equal arms, so the intermediate frame reads as a symmetric X instead of a lopsided "+".
+- Final X, 0.80–2.00s: yours' glyph sits a touch larger/heavier than target's slightly smaller, thinner-armed X.

@@ -1,0 +1,5 @@
+Yours is about the same as previous — both render a squat pedestal-shaped trophy instead of the target's upright goblet, so no part visibly improved or regressed. CHANGE: same
+
+1. Trophy silhouette — 0.40s–1.97s: yours draws only a short flat pedestal (x≈225–330, y≈250–300); the target draws the full goblet with bowl, handles and center star (x≈235–320, y≈130–300) — the cup/handles/star are missing.
+2. Rise / scale-up — 0.13s–0.53s: target goes thin bar (0.13s) → tiny base (0.27s) → half height (0.40s) → full-height trophy (0.53s) and keeps growing to max size by ~1.03s; yours stays a small flat bar/pedestal at constant size the entire clip.
+3. Star burst — 0.67s–1.43s: target throws a large 4/5-point star sparkle burst around the cup peaking ~1.03s (stars spread x≈150–400, y≈100–300) plus a star inside the bowl; yours shows only a few tiny sparkles hugging the pedestal at 0.93s–1.30s that fade too early and never surround the cup.

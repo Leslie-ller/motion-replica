@@ -1,0 +1,6 @@
+Yours looks essentially identical to "previous" — same burst timing, same star spread, same fade; I see no meaningful gain or regression. CHANGE: same
+
+1. Sparkle birth, 0.53–0.67 s — target's main 4-point sparkle is already large and bright over the bowl (≈x 255–300, y 25–60); yours still shows only a small dim star at 0.53 s and reaches full brightness roughly 0.13 s late.
+2. Peak burst spread, 0.93–1.03 s — target flings 5–6 satellites out to ≈x 185 and ≈x 365 with the big sparkle straddling the bowl; yours keeps them tighter (≈x 215–335) and the main sparkle sits at the cup's lower-left instead of centered on the bowl mouth.
+3. Fade-out length, 1.17–1.43 s — target still shows faint stars at 1.30 s and 1.43 s before clearing; yours is essentially clean by ~1.30 s, so the decay is ~0.2 s too short.
+4. Early growth, 0.27–0.40 s — target already reads as a squat cup blob at 0.27 s (≈14×8 px at x 265–285, y 30–45); yours stays a thin 2–3 px sliver until 0.40 s.

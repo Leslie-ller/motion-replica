@@ -1,0 +1,5 @@
+Yours is closer than previous — the 0.13 s intermediate now reads as a circular dot arrangement instead of previous's squashed pill, and the 0.27–0.93 s plus→X rotation is unchanged and still on track. CHANGE: better
+
+- 0.13 s dot burst (centre ≈ x150,y150): yours is a tidy ring of large, evenly spaced dots; target is a looser scatter of smaller dots drifting outward with two pink diagonal motion-blur streaks — shrink/spread the dots and add the streaks.
+- Plus rotation (0.27–0.53 s, centre ≈ x150,y150): target's plus is already a few degrees tilted at 0.27 s and ~35–40° at 0.40 s; yours is near-upright at 0.27 s and only ~20–25° at 0.40 s, so the spin starts late.
+- Ring at 0.00 s (centre ≈ x150,y150): target's dashes are finer and more numerous; yours uses fewer, chunkier dots, so the start shape reads heavier.

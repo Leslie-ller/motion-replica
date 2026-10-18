@@ -1,0 +1,5 @@
+Yours is about the same as previous — the two rows match cell-for-cell almost everywhere, so nothing visibly regressed and nothing clearly improved; the same gaps against the target remain. CHANGE: same
+
+1. Dark card fade-in — 0.40–1.20 s: target's card (x 64–190, y 8–92) is already a faint gray panel at 0.40 s and only mid-navy at 0.80 s, reaching full opacity ~1.2 s; yours is blank at 0.40 s and jumps to full dark by 0.80 s (onset ~0.3 s late, ramp too steep).
+2. Green accent — 2.36–2.76 s: target stays white-bar + red-bar only at 2.36 s and first shows green at 2.76 s (bar plus tiny tick at x≈8, y≈84); yours shows the green tick at the card's bottom-left (x≈6–14, y≈82–88) already at 2.36 s, ~0.4 s early.
+3. Stacked text rows — 3.16–5.92 s: target builds white / red / blue / green with the extra green row arriving at ~4.4 s and bar ends near x≈160; yours has the red/green/blue rows one step ahead (extra row by ~3.96 s) and the lower bars end ~10 px shorter, so the stack reads ahead of the target through the second half.

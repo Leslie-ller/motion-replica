@@ -1,0 +1,5 @@
+yours is closer to target than previous: the 0.40s card fade-in and the top-left three-dot indicator from 3.16s onward now match, but the dots are still missing 0.80–2.76s and a stray green mark lingers at 2.76s. CHANGE: better
+
+1. Dots indicator, 0.80–2.76s: yours shows a plain dark card; target already shows three dots at the card's top-left (≈x76–98, y74–82) from the card's very first frame, so the "typing" state reads late in yours.
+2. Stray green mark, ~2.76s: yours has a small green speck at the card's lower-left (≈x78, y150); target has no green there — its green bar only starts around 3.9s at y≈152.
+3. Red/teal bar growth, 2.36–3.16s: target's red bar reaches ≈x150 and its teal bar ≈x180 by 3.16s; in yours both bars sit roughly 20–30 px shorter at the same times, so the second and third bars lag the target's growth curve.

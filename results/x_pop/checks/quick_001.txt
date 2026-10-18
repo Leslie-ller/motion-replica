@@ -1,0 +1,7 @@
+**1. Glyph rotation timing — 0.27–0.53 s.** Yours is already a full 45° X at 0.40 s (and ~25° tilted at 0.27 s); the target still holds an upright "+" at 0.27 s, only ~15° at 0.40 s, and only completes the X at ~0.53 s.
+
+**2. X size / stroke weight — 0.53–2.00 s (center 150,150).** Yours' arms are ~15% longer and ~30% thicker: target X spans ≈78 px (x≈111–189) with ≈11 px strokes; yours spans ≈92 px (x≈104–196) with ≈16 px strokes.
+
+**3. Birth ring — 0.00 s.** Target draws a ≈20 px diameter segmented ring (visible gaps, full opacity) at (150,150); yours is ≈8 px, near-solid and much fainter/lower alpha.
+
+(Minor 4th: at 0.13 s the target's pink scatter reads as a "+"-shaped burst, yours' as an X-shaped/denser burst.)

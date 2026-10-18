@@ -1,0 +1,6 @@
+"yours" is slightly further from the target than "previous": the fade-in, the white bar and the stacked colored bars all match, but the 3-dot counter no longer builds up. CHANGE: worse
+
+1. Dot counter, 1.20–1.56 s: "yours" card stays empty; target shows 1 dot at 1.20 s then 2 dots at 1.56 s (x≈52–85, y≈52–64) before all three appear at 1.96 s.
+2. Dot pop-in, 1.96 s: with the 1-dot and 2-dot frames gone, "yours" jumps straight from 0 to 3 dots at once instead of staggering 1→2→3.
+3. Green bar row, 3.16–3.56 s: target places a green bar on the same row as cyan, directly under the left red bar (x≈55–110, y≈135–150); "yours" puts that green one row lower.
+4. Stack depth, 3.96 s: target already shows a right-side red bar (x≈125–190, y≈150–162) that "yours" is still missing.

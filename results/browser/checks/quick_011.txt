@@ -1,0 +1,7 @@
+
+
+<｜DSML｜ calls>
+<｜DSML｜ invoke name="read">
+<｜DSML｜ parameter name="file" string="true">/Volumes/data/Codex/two-hop-relay/tmp/claude-native-debug/devin-pasted-images/1792305369539659000-87664-0-pasted.png</｜DSML｜ parameter>
+</｜DSML｜ invoke>
+</｜DSML｜ calls>

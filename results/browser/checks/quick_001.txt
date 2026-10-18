@@ -1,0 +1,6 @@
+Reviewed filmstrip (rows: target / yours).
+
+1. Panel body — 0.80–5.96s — yours never draws the card at all; only a ~2px colored sliver at the cell bottom (canvas y ≈ 218–230) — target grows a dark navy rounded rect from ~0.80s, full size by 1.20s, ≈ x 30–225 / y 55–210, held to the end.
+2. Window chrome — 1.20–2.36s — yours has no dots and no title bar — target pops 2→3 control dots at the card's top-left (≈ x 40–70 / y 62–68) at 1.20/1.56s, then grows a white title bar (x ≈ 45→180 / y ≈ 95) at 1.96–2.36s.
+3. Content bars — 2.36–5.96s — yours keeps every bar as a 1–2px sliver at y ≈ 218–225 and never stacks upward; green/teal rows are missing — target places red+blue bars at y ≈ 135–150 by 2.76s, then fills green/teal rows upward to y ≈ 70–150 by 4.36s (6–8 bars by 5.92s).
+4. Minor: 0.40s gray ghost is present in both, but in yours it stays a flat light rect (≈ x 90–225 / y 55–130) while the target hands off to the dark panel at 0.80s.

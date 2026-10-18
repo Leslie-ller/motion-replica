@@ -1,0 +1,5 @@
+Yours is further from the target than previous: the rise is slightly cleaner but you lost the cup star and almost the whole sparkle burst that previous still had. CHANGE: worse
+
+- **Cup star** — 0.53–2.00s: your trophy cup is plain; target keeps a 5-point star centered on the cup (≈x 275, y 150) all the way to the last frame (previous had it too).
+- **Sparkle burst** — 0.67–1.43s: yours shows only ~2 tiny stars near x 300–320, y 280–300; target fires 6–8 stars of varying size around the trophy (x 180–380, y 60–330), peaking 0.80–1.03s and still fading in at 1.17–1.43s.
+- **Rise reveal** — 0.13–0.53s: yours is blank at 0.27s and a flat sliver at 0.40s, then pops to a full trophy at 0.53s; target shows a baseline sliver at 0.13s, a small base at 0.27s, base+stem (bottom-up wipe, ≈y 240–330) at 0.40s, then full trophy at 0.53s.

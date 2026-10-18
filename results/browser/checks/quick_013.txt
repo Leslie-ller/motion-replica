@@ -1,0 +1,5 @@
+Yours is essentially the same as previous — the two share the same structure and stray artifacts, so neither meaningfully closes the gap on the target. CHANGE: same
+
+1. Stray green element, 2.76s: yours (and previous) show a tiny green speck at x≈65–80, y≈172 that the target does not have at all; target stays white-bar/red-bar/blue-bar until 3.16s.
+2. Green bar too small, 3.16s: yours renders the green row as a speck near x≈70, y≈175, while the target draws a full green bar spanning x≈75–155 at y≈168.
+3. Colored-row order/length, 3.56–5.92s: yours keeps blue in the 3rd slot and lets bars run out to x≈190; the target's 3rd slot is teal with shorter bars ending near x≈175, giving a looser 4-row stack instead of yours' 5 tight rows.

@@ -1,0 +1,5 @@
+Yours is roughly the same as previous: the 0.13 s line and the star on the cup now match the target, but the trophy silhouette regressed and the sparkle burst is still missing. CHANGE: same
+
+- Sparkle burst — target 0.80–1.43 s (peak 1.03 s): 4-point stars of several sizes radiate ~±200 px around the trophy (x≈70–480, y≈80–290) and fade out by 1.43 s; yours shows only one small sparkle at 0.93–1.03 s near x≈210, y≈150, nothing after.
+- Trophy silhouette — target 0.53–1.97 s: cup with two distinct side handles + centre star, roughly 180 px wide × 185 px tall (x 185–365, y 115–300); yours is squashed to ~290 px wide × ~145 px tall (x 130–420, y 155–300) with handles merged into a flat rim and a single wide base plate.
+- Intro squash — target 0.27–0.40 s grows a solid plinth/stem block ~10–20 px tall (y 255–285) before the cup; yours stays a thin flat sliver ~4–8 px, so the trophy pops to full height instead of extending upward from the base.

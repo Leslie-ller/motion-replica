@@ -1,0 +1,5 @@
+**yours is slightly further from the target than "previous": the 0.27s–2.00s portion still matches frame-for-frame, but the new open-ring opening (0.00–0.13s) replaces the target's spoke mark and is far crisper/more saturated than the target's smeared start; nothing improved.** CHANGE: worse
+
+- **Start mark, 0.00s** — yours draws a hollow circle/ring (~40px across, centered ~(150,150)); the target draws a thin 6-spoke asterisk of the same size with no ring at all, i.e. spokes radiating from a point rather than an outline.
+- **Start mark, 0.13s** — yours is a hard-edged ring with a sharp starburst inside; the target is a soft, low-opacity pink 6-spoke burst with heavy motion smear and no ring — it reads as the 0.00s mark blurred, not a new shape.
+- **Blur→resolve beat, 0.00–0.27s** — the target stays small and smeared through 0.13s, then snaps into a thick hard "+" at 0.27s; yours is already sharp at 0.00s and passes through an extra ringed state, so the smeared-then-resolve transition is missing.

@@ -1,0 +1,5 @@
+Yours is about the same as previous relative to the target (same grow → burst → settle arc; only the burst reads slightly weaker/later). CHANGE: same
+
+- Sparkle onset, 0.67–0.93 s: target's cup already has small sparkles/stars at 0.67 s and 0.80 s and a full ring at 0.93 s (x≈520, y≈37); yours is bare at 0.67–0.80 s and only faint at 0.93 s (x≈520, y≈163) — burst starts ~0.2 s late and dimmer.
+- Sparkle fade, 1.17–1.43 s: target is nearly clear by 1.30 s (x≈176, y≈238) and gone at 1.43 s (x≈245); yours still shows distinct sparkles at 1.30 s (x≈176, y≈364) — decay runs ~1 frame late.
+- Cup growth, 0.27–0.53 s: target stages thin line (0.13 s) → small flat foot (0.27 s) → tall narrow stem/pedestal at 0.40 s (x≈245, y≈37) → full cup at 0.53 s (x≈314); yours shows a wide squat base at 0.40 s and pops straight to the full cup at 0.53 s, skipping the tall stem phase.

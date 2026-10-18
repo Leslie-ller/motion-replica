@@ -1,0 +1,5 @@
+Yours is closer to the target than previous: the card now goes dark and scales to full size by 1.20s, whereas previous was still pale gray at 0.80s with a stray gray line at y≈130, so the early build-in is fixed. CHANGE: better
+
+1. Skeleton rows appear too early — 1.96s–2.76s: at 2.36s yours already draws three colored rows (red/blue/teal, y≈95–120) under the white bar, while target draws only two (red x 60–130, blue x 60–130); at 2.76s yours has four rows vs target's three. Target adds one row per ~0.4s and finishes ~4.0s.
+2. Fade-in ghost geometry — 0.40s: target's pale card is large and high (≈ x 40–215, y 15–150); yours is small and low (≈ x 75–180, y 55–155), so yours grows in from the old size/position instead of a near-full-size ghost.
+3. Stray white square — 1.96s: yours shows a small white square at the card's top-left (≈ x 62–72, y 45–55); target has only the three dots and the white bar (y≈70) there.

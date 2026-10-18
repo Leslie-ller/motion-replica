@@ -1,0 +1,5 @@
+CHANGE: same — "yours" is cell-for-cell identical to "previous" (thin ring at 0.00s, pink ring+cross at 0.13s, plus at 0.27-0.40s, X from 0.53s on): no regression, but no visible progress toward the target either.
+
+1. Birth glyph, 0.00s: target draws ~10 tiny red dots in a tight rosette ~35px wide at center (~150,150); yours draws one thin stroked red circle outline with no dots — wrong element (stroke ring vs. particle rosette).
+2. Opening texture/opacity, 0.00-0.13s: target is a soft ~50%-opacity pink speckle cloud that scatters while a single thin bar grows through it; yours stays hard-edged and fully opaque, keeping a crisp pink ring at 0.13s that the target has already dissolved.
+3. Arm growth, 0.13-0.27s: target's plus is asymmetric at 0.13s (one long horizontal arm, short vertical) and only reaches full symmetric thickness at 0.27s; yours is already a full-weight symmetric cross by 0.13-0.27s, so the morph reads as a pop instead of a growth.

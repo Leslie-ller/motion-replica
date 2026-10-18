@@ -1,0 +1,9 @@
+"Yours" is closer to the target than "previous" — previous had a far too small trophy during 0.13–0.67 s and a hugely oversized sparkle burst at 0.80–1.17 s; yours matches the target's trophy scale and burst order much better (the burst is now slightly late and small rather than far too big). CHANGE: better
+
+1. Sparkle timing — stars around the cup, approx x 150–400 / y 60–230: target has first tiny sparkles at 0.67 s, peak 0.93–1.17 s, fully gone by 1.43 s; yours has none until 0.93 s, peaks 1.03–1.17 s, and still shows stray sparkles at 1.43–1.97 s. Needs to start ~0.27 s earlier and clear ~0.27 s sooner.
+
+2. Sparkle amplitude — same region: at peak (1.03–1.17 s) target's 4-point stars spread well beyond the trophy (out to approx x 150 and x 400, y 60 and y 230); yours stay tight against it (approx x 200–350 / y 90–200) and are smaller.
+
+3. Trophy emergence — bottom-centre, approx x 190–360 / y 110–350, squash bar near y 220–250: target is blank at 0.00–0.13 s, a flat bar at 0.27 s, a squat nub at 0.40 s, and only full at 0.53 s (vertical squash-and-stretch). Yours already shows the bar at 0.13 s and a full cup by 0.27–0.40 s, so it starts ~0.13 s early and skips the squashed in-between shape.
+
+4. Hold pose — approx x 190–360 / y 110–350: target's resting trophy (1.43–1.97 s) sits clean with no sparkles; yours still carries faint sparkles into 1.57–1.97 s, so the end state doesn't fully settle.

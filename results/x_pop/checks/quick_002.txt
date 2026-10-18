@@ -1,0 +1,5 @@
+Yours is closer than previous — it now passes through the target's "+" formation stage at 0.27–0.40s (previous cut straight from specks to X) and lands on the same final X. CHANGE: better
+
+1. Particle cluster, 0.10–0.20s, centered ≈(150,150): yours is a tight, even ring of ~12 dots (~25 canvas px across); the target is a looser, asymmetric scatter of ~6–8 specks already hinting a "+" (fragments trailing left and up-right), with no ring.
+2. "+" stroke weight and tilt, 0.27–0.40s, ≈(150,145): the target's bars are ~1.5× thicker and already tilted ~15° at 0.27s, ~35° by 0.40s with one arm shortening; yours is thin, near-upright at 0.27s (~5°) and only ~25° at 0.40s, so it reads light and lags into the X.
+3. X weight ramp, 0.53–0.93s, ≈(150,150): the target reaches near-final weight/size by ~0.70s; yours stays thin and small until ~1.00s, so it is visibly lighter at 0.53–0.80s, then slightly heavier/larger than target at 1.05–2.00s.

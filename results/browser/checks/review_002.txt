@@ -1,0 +1,19 @@
+Comparing the filmstrips and the motion curves, the clearest mismatches are:
+
+1. **Dark tile reveal / background card — 0.36–1.00 s (whole canvas, tile x≈18–238, y≈18–238).** Target first grows a pale light‑grey rounded square (visible from ~0.36 s, covering most of the tile by 0.64 s), then the dark navy tile scales up on top of it from ~0.72 s and is fully dark navy by ~0.88 s. Yours shows nothing at 0.36–0.64 s, and at 0.76–0.88 s your tile is still mid‑grey (roughly the size the target's dark tile already is); it only becomes dark navy around 0.95–1.00 s. So the pale pre‑reveal card is missing and the dark fill is ~0.2 s late.
+
+2. **Cyan bar (right of the red bar, y≈160) is too long too early — ~2.5–3.5 s.** Target's cyan starts as a dot at ~2.34 s at the red bar's right end, is only ~20–25 px long at 2.6 s and grows in small visible steps (roughly 2.6 s, 2.75–2.85 s, 3.5 s) reaching its full ~45 px (right edge x≈167) only near 3.5 s. Yours ramps smoothly and is already ~30–45 px at 2.6–2.9 s, i.e. 10–20 px too long through ~2.6–3.4 s.
+
+3. **Teal/green bar (bottom‑left, y≈185) too long too early — ~2.9–4.2 s.** Target keeps it a tiny dot at ~2.9 s and grows it in steps, only reaching its final length (~55 px, right edge x≈178) around 3.6–4.3 s. Yours is already ~10–15 px longer at 3.04–3.5 s and hits final length ~3.3 s, so it is oversized for most of 3.0–4.2 s (the target thick teal curve sits below yours until ~4.3 s).
+
+4. **Second red bar at the right (x≈205–230, y≈160) — ~3.6–4.3 s.** Target brings it in at ~3.6 s and it reaches full length quickly; in yours it appears at about the same moment but is ~5–8 px shorter and only reaches the target length around 4.3 s.
+
+5. **Red bar start (left, y≈160) — 2.1–2.5 s.** Both start as a dot at ~2.08 s, but yours reaches full length slightly sooner (full by ~2.28 s vs target ~2.32–2.36 s) and its left end sits ~3–5 px further left (x≈62 vs ≈68 in target) for the rest of the clip.
+
+6. **White bar length (y≈118) — 1.9–5.9 s.** Yours is consistently ~8–10 px longer at the left end (e.g. at 5.9 s left edge x≈98 vs ≈108 in target); at 1.76 s your white stub is also a little wider. The right end matches.
+
+7. **Tile settling — 1.0–1.6 s.** Target's navy tile size and x/y settle cleanly by ~1.0 s; your navy visible‑size and x/y curves stay jagged until ~1.6 s (the tile keeps scaling/jittering after it is already fully dark), and your tile centre sits ~1–2 px lower than the target's for the rest of the clip.
+
+Timings that do match: the three grey dots (1.24 s / 1.52 s / 1.76 s), white bar appearance (1.76 s), red bar appearance (2.08 s), cyan dot (2.34 s), teal dot (~2.9 s), overall end state at 5.92 s.
+
+REMAINING: yes

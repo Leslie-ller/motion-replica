@@ -1,0 +1,5 @@
+Yours is closer to the target than previous: the white bar now reaches full width at 1.96s and the 0.40s gray ghost is the right size, but the colored bar stack still builds up too late. CHANGE: better
+
+1. Colored bar stack — 3.16–4.36s: yours shows only 3–4 bars (green ~y148 and teal ~y168 rows missing) while the target already has 5–6 by 3.16–3.56s; yours only catches up around 4.36s.
+2. White bar onset — 1.56s: yours already draws a short white segment (~x68–80, y≈128); the target panel stays blank and the bar first appears at 1.96s.
+3. Dark panel entrance — 0.80–1.20s: yours' panel is smaller and sits low-left (roughly x60–195, y55–195); the target panel is already near full size and centered (~x50–205, y45–200) by 1.20s.

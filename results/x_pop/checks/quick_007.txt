@@ -1,0 +1,6 @@
+**Verdict:** "yours" is about the same as "previous" — the 0.13 s emergence and the 0.00 s ring are closer to the target, but the rotation now starts too early, so the mid-clip frames regressed. CHANGE: same
+
+- **Plus→X rotation onset** — 0.20–0.45 s, center (150,150): "yours" is already tilted ~20° at 0.27 s and is a full X by 0.40 s. The target holds an axis-aligned thick plus through 0.27 s, is only ~10–15° at 0.40 s, and reaches the X at 0.53 s — delay the rotation ~0.13 s (previous had this phase right).
+- **X arm length / stroke** — 0.53–1.98 s, center (150,150): "yours" X spans ~200 canvas px with ~22 px strokes; the target's X is ~185 px across with ~25 px strokes, so yours reads slightly larger and thinner-limbed for the whole hold.
+- **0.13 s emergence** — around (150,150), t=0.13 s: "yours" fills the pink plus more evenly/opaque; the target's shape is a lighter translucent plus outline with the red dots bunched along the four arms and a thinner center (previous was worse here — loose speckles — so this is the improvement).
+- Minor: at 0.00 s "yours" dashed ring looks ~2–4 canvas px larger than the target's tight ~22 px ring.

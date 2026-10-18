@@ -1,0 +1,6 @@
+"yours" is closer than "previous": the opening circle is now actually visible instead of a nearly-invisible faded asterisk, and the circle→plus→X sequence reads correctly; previous also had a chunkier plus. CHANGE: better
+
+1. Opening mark, 0.00–0.05s, center ≈(150,150): yours is a large continuous hollow ring (r≈25px) with nothing inside; target is a tiny dashed circle (r≈12–15px) with a solid dot at its center.
+2. Opening burst, 0.08–0.20s, ≈(150,150): yours keeps a closed pink ring with star-like spokes inside (reads as an "O with a star"); target is a loose scatter of short detached segments, no closed outline and no spokes.
+3. Color/weight of the opening strokes, 0.00–0.20s: yours' pink marks are more saturated and thicker than target's pale rose thin strokes, so the collapse reads heavier than the target's light dissolve.
+4. Plus arms, 0.27–0.67s, ≈(150,150): yours' arms and stroke width look slightly heavier than target's (target half-arm ≈30px, stroke ≈5px), so the cross/X reads a touch chunkier than the target.

@@ -1,0 +1,6 @@
+Yours is closer than previous: the 0.27s plus is now clean (previous had a pink pixelated halo around it) and the settled X matches well. CHANGE: better
+
+- Spawn (0.00–0.13s, ~150,150): target starts as a small (~20px) hollow red plus/ring, then at 0.13s becomes a faint pink plus outline with a faint pink X overlaid (plus→X crossfade). Yours is a dimmer, lighter-pink hollow star at 0.00s and a blocky pixelated dot cluster at 0.13s with no legible plus or X — same as previous, untouched.
+- Rotation timing (0.40s, ~150,150): target is still a plus, only rotated ~30° CW (full X arrives at 0.53s). Yours has already completed to an X at ~45–50°, so the plus→X turn runs roughly 0.13s early.
+- Final X orientation (0.53–0.93s, ~150,150): target's X is symmetric with arms at ±45°; yours sits ~10° CW off-axis, converging back to the target by ~1.05s.
+- 0.27s plus is correct in shape/weight but slightly smaller than target's; target's plus reads a few px wider on both axes.

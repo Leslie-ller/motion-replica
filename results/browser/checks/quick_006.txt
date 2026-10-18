@@ -1,0 +1,5 @@
+Yours is closer than previous — the 0.40s placeholder and the 0.80s card are both larger and nearer the target's size, though the entrance is still late and undersized. CHANGE: better
+
+1. Card/placeholder entrance, 0.00–0.80s: yours is blank at 0.00s and its gray placeholder at 0.40s spans ≈x26–180, y26–215; the target already shows a faint full-size card at 0.00s and its placeholder fills ≈x25–195, y25–230.
+2. Card build, 0.80–1.20s: yours still draws the gray header and navy body as two separate rounded rects with a white gap (header ≈x25–150 y20–95, body ≈x25–190 y100–240); the target is one full-width card (≈x20–235) with the gray header flush against its top edge.
+3. Content lines, 1.96–2.76s: yours' white title line is only a short stub (≈x25–85, y≈100) at 1.96s and the cyan bar is a ~5px sliver at 2.36s; the target's line is already full width (≈x55–200) by 1.96s and both red and cyan bars reach full length by 2.76s.

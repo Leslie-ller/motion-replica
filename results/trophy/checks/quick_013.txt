@@ -1,0 +1,5 @@
+Yours is closer than previous — the rise now reads as a compact trophy at 0.27–0.53 s instead of previous's wide flat blob, and the 0.13 s dash is shorter; the star and sparkle issues are unchanged. CHANGE: better
+
+1. Star emblem — 0.53–2.00 s: target stamps a 5-point star on the cup front (approx x 250–300, y 170–215) and holds it to the end; yours is a plain cup in every frame.
+2. Sparkle burst — 0.67–1.43 s: target's star sparkles pop at 0.67 s, peak large and wide at 0.80–1.03 s (approx x 130–420, y 80–300) and are gone by ~1.43 s; yours start ~0.80 s, stay small/tight, and linger to 1.30 s.
+3. Early squash — 0.27 s: target is already a compact cup rim (approx x 245–305, y 180–200); yours is still a wide flat ellipse (approx x 210–340, y 185–200), close to previous.

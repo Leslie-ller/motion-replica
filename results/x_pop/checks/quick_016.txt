@@ -1,0 +1,5 @@
+Yours is about the same as previous: the 0.27–0.40s plus now matches the target's weight/darker red better, but the 0.00–0.13s opening lost the ring element — roughly a wash. CHANGE: same
+
+1. Opening shape, 0.00–0.10s, center (150,150): target is a small red *dashed ring* (~48px dia, ~8 short dashes); yours is a 6-arm asterisk (~30px) — wrong element entirely.
+2. Opening opacity/size, 0.00–0.13s: target's ring is saturated red and fully opaque; yours is pale pink at ~25% opacity and nearly vanishes against white.
+3. Morph/burst, 0.05–0.25s: target blurs the ring into a soft pink X with ~10 scattered speckles (r≈35px) at 0.13s, then settles into the plus; yours cuts straight from the faint star to the solid plus — no blur, no speckles, no cross intermediate.

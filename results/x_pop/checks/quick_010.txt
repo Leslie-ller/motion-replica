@@ -1,0 +1,6 @@
+Yours is closer to the target than previous: the 0.00–0.13s opening now reads as a ring that becomes a cross instead of previous's pink 8-point star, and the cross→X turn plus the long steady X (0.53–1.98s) land on the target pose. Remaining gaps are in the first ~0.45s. CHANGE: better
+
+1. Initial glyph, 0.00–0.05s: yours is a continuous hexagonal/rounded ring outline; target is a ring of ~8 discrete dots (center 150,150, r≈10px). Draw separate dots, not a joined outline.
+2. Mid-morph, 0.10–0.20s: yours is an opaque, near-upright pink cross; target is a fainter cross already tilted ~30–35° with scattered faint dots around it (dot residue / motion smear).
+3. Cross rotation, 0.20–0.45s: yours holds upright until ~0.35s then snaps around; target is already tilted ~15–20° at 0.27s and reaches the 45° X by ~0.53s — start the rotation earlier and keep it linear.
+4. Stroke weight, 0.27–0.53s: yours' cross arms are noticeably thicker/blockier than target's, which stays slimmer with squarer ends.

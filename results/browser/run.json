@@ -1,0 +1,24 @@
+{
+  "task": "browser",
+  "model": "deepseek-v4-1-flash-high (Devin, tools disabled)",
+  "condition": "loop",
+  "code": "current code",
+  "ended": "finish",
+  "actions_used": 23,
+  "versions": 15,
+  "wall_seconds": 970.2,
+  "stats": {
+    "actions": {
+      "set_ir": 6,
+      "preview": 7,
+      "patch_ir": 9,
+      "finish": 1
+    },
+    "invalid_actions": 0,
+    "previews": 7,
+    "quick_checks": 13,
+    "reviews": 2,
+    "auto_reviews": 2,
+    "checker_seconds": 585.7
+  }
+}

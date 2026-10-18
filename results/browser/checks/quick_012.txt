@@ -1,0 +1,5 @@
+yours is closer to the target than previous: the card's entrance now reads as a mid-gray square at 0.80 s instead of popping in fully dark, and the bar stack reaches the target's 6-bar count by ~5.9 s. CHANGE: better
+
+1. Top-left dots — 1.56–1.96 s: yours (x≈66–84, y≈56–66) is bare; target already shows two small gray dots from 1.56 s (three by 2.36 s), yours only starts them at 2.36 s.
+2. Stray clipped bar stub — 2.76–3.16 s: yours draws a short bar flush against the card's left edge (x≈60–80, y≈146–158; teal at 2.76 s, red at 3.16 s) that the target never has there — the target's 5th bar first appears at 3.56 s and begins at the same left inset as the others.
+3. Card fade-in start — 0.00–0.40 s: yours already shows a clearly visible light-gray card (x≈60–200, y≈50–210) at 0.40 s, while the target is still essentially white at 0.40 s and only reaches ~50% gray at 0.80 s.

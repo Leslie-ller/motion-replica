@@ -1,0 +1,5 @@
+Biggest remaining differences (canvas px, x right / y down):
+
+1. **Trophy scale** (0.40–2.00 s): yours caps at ~25×22 px centered ≈ (300, 150); target reaches ~52×46 px. Growth is roughly half-scale, so it never fills the cell.
+2. **Star burst** (0.53–1.30 s): target flings ~15–20 px opaque gold stars out to ±40 px around the trophy; yours' stars are ~6–8 px at low opacity, so the burst reads as absent.
+3. **Growth onset** (0.13–0.53 s): target shows a clear ~30 px orange line at 0.13 s (y≈60) then a full trophy by 0.53 s; yours has only a faint sliver at 0.13 s and is still a ~15 px stub at 0.53 s — the pop-in is late and weak.

@@ -1,0 +1,6 @@
+CHANGE: better — the 0.27–0.53 s spin now matches the target's timing (upright "+" → tilted "+" → "X"), and the 0.13 s clutter is less chaotic than "previous"; what got worse/regressed is the 0.00 s start marker, which is now a tiny plain ring instead of the target's spoked asterisk, and the 0.13 s frame is a denser pink blob than the target's sparse trails.
+
+1. Start marker, 0.00 s, ~(132–168)x/(132–168)y: "yours" is a ~12 px plain red circle with no spokes; target is a ~28 px dashed asterisk with 8 radiating dashes at the same radius — yours is too small, too faint, too empty.
+2. 0.13 s, ~(118–182)x/(118–182)y: "yours" is a solid pink petal/cluster blob with a red core; target shows only thin pale-pink motion trails behind two clean red "+" arms mid-formation — yours is too opaque/pink and reads as a flower, not an emerging plus.
+3. 0.27 s, ~(120–180)x/(120–180)y: "yours" is a fully upright "+" while the target's "+" is already tilted ~10–15°; the spin visibly starts a frame late in "yours" (it catches up by 0.40 s and matches from 0.53 s onward).
+4. 0.00–0.13 s growth, canvas center: target's shape expands from the dashed asterisk outward into the plus with trailing dashes fading; "yours" jumps from a small ring to a compact blob, so the expansion feels like a pop rather than a radial growth.

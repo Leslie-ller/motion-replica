@@ -1,0 +1,7 @@
+Yours is closer than previous: the silhouette is now a compact trophy (bowl + side handles + stepped base) instead of previous's wide flared "wine-glass" body, and it no longer lags so badly at 0.27–0.40 s. CHANGE: better
+
+- Star emblem — 0.53–2.00 s — yours has none; target has a 5-point star inside the bowl (≈275,195) plus a large star at upper-right (≈320,155) that stays through the end.
+- Cup fill/shape — 0.27–2.00 s — yours is an unfilled stroke-only outline with a tall narrow bowl, pointed flared rim and long thin handles; target is a solid gold broad shallow bowl with a straight wide rim (x≈230–320, y≈165–215) and short nub handles.
+- Sparkles — 0.80–1.35 s — target bursts ~8 gold particles of varied size/opacity around the trophy (x≈200–350, y≈120–260) and fades them by ~1.35 s; yours shows only 2–3 tiny dots that start late (~0.93 s).
+- Growth ramp — 0.13–0.80 s — target is already a small solid sliver at 0.27 s and near full size by 0.53 s; yours stays a thin small outline and reads noticeably smaller than target until ~1.03 s.
+- Base/pedestal — 0.53–2.00 s — target's base is a wide flat foot with a rounded pedestal (≈240–310, y≈225–250); yours is narrower with a taller two-step block.

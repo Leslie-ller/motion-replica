@@ -1,0 +1,15 @@
+Comparing the fine frames (1.00–2.00 s) plus the two filmstrips and the motion curves, the visible differences that matter, most important first:
+
+1. **Panel (big dark-navy rounded rect, ≈x 20–236, y 20–236)** — *fade-in timing/easing wrong.* Target: canvas is pure white at 0.12 s and 0.24 s, first faint grey only at ≈0.30–0.36 s, mid-grey 0.52–0.64 s, fully dark navy by ≈0.76–0.88 s (a late, fast fade). Yours: already a faint grey rect at 0.12 s and 0.24 s, still light at 0.52 s, only mid-grey at 0.64 s and 0.76 s, reaching navy ≈0.88–1.00 s. So yours starts ~0.2 s too early and darkens too gradually (should be delayed then snap darker).
+
+2. **Coloured text bars (blue / red / teal / green, inside the panel, y≈85–210)** — *yours runs ~0.12–0.24 s ahead.* At 2.28 s target shows only the white heading + a short red bar, while yours already shows red **and** blue; by 2.88 s target has ~5 bars and yours ~7. Same at 2.40–2.76 s (yours is consistently one frame richer). Motion chart confirms: yours' (thin black) blue/teal/red visible-size curves start rising ~0.2–0.3 s before target's thick curves. Target staggers each new bar later than yours does.
+
+3. **White heading bar (panel, y≈58–68, growing rightward from x≈40)** — *appears/grows too late and too slowly in yours.* Target: first white mark at ≈1.68 s, ~half length at 1.84 s, full length (to x≈150) by ≈1.92 s. Yours: nothing until ≈1.78–1.80 s, still a short stub at 1.88 s, only full length at ≈2.00 s. At the same 1.88 s frame target's bar is roughly twice as long as yours'.
+
+4. **Three dots (panel top-left, ≈x 36/48/60, y≈34)** — *wrong stagger.* Target fades them in one by one, well spaced: 1st ≈1.18–1.20 s, 2nd ≈1.44 s, 3rd ≈1.66 s. Yours: 1st ≈1.30 s, 2nd ≈1.48 s, 3rd ≈1.60 s — the first dot is ~0.12 s late and the whole sequence is compressed/too fast.
+
+5. **Teal bar final size** — *yours' is too big.* In the motion chart (teal row) target's teal visible size plateaus at ≈0.50 of the panel height, yours' (thin black) at ≈0.62; target's teal bar stays noticeably shorter/smaller than yours at the end.
+
+6. **Blue bar position/motion** — *target slides, yours pops in place.* Motion chart (blue row): target's blue centre x dips (moves left) around ≈2.2 s and its y steps down/up before settling, whereas yours' blue line is flat in both x and y from the moment it appears — i.e. yours appears statically where target animates it into position.
+
+REMAINING: yes

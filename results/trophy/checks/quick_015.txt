@@ -1,0 +1,5 @@
+Yours is about the same as previous — trophy silhouette, growth timing and sparkle pattern match frame-for-frame, so no clear gain or regression. CHANGE: same
+
+1. Trophy body (0.53–1.97 s, cup centered ~x 240, y 95–315): target is a tall trophy — narrow stem, flared pedestal base and a star badge on the cup; yours is a squat wide cup with two large hoop handles, no stem/base and no star emblem.
+2. Sparkle glyphs (0.80–1.30 s, around the cup): target scatters five-pointed stars of varying size (large ones lower-left and top-left at 1.03 s); yours draws only small four-point diamonds hugging the cup edges.
+3. Sparkle burst size/lifetime (0.93–1.43 s): target peaks largest at 1.03 s and is still faintly visible at 1.30–1.43 s; yours peaks smaller at 0.93–1.03 s and is fully clean from 1.17 s on.

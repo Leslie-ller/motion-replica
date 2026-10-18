@@ -1,0 +1,6 @@
+Yours is closer than previous — the silhouette now reads as a real trophy (cup, handles, base) instead of previous's flat-topped, squashed shape, and the entrance is more coherent; the big star burst is still missing. CHANGE: better
+
+1. Star burst — 1.03–1.43s — yours only has small sparkles (~8px) sitting on the trophy; target fires 6+ stars (~15–25px) outward from the trophy, spread x≈200–350 / y≈130–265 at 1.03s, drifting further out and fading to nothing by ~1.43s.
+2. Trophy proportions — 0.67–2.00s — yours' cup is too wide and short (vertically squashed, flat/wide base); target keeps a taller cup with distinct handles, a visible stem and a narrow pedestal.
+3. Entrance — 0.13–0.53s — yours scales a small centered sliver uniformly; target enters as a very wide thin bar near the base (x≈185–290, y≈210) that squashes upward and "grows" into the cup.
+4. Timing — 0.67s — yours is already at full trophy with a star; target is still mid-growth (full size only by ~0.80s), so yours finishes ~0.13s early.

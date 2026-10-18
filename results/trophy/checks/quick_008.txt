@@ -1,0 +1,6 @@
+Yours is closer — the cup now grows into a trophy-like shape with a proper stem and base, much nearer the target's silhouette than previous's flat wide bowl, though the emblem and sparkle burst are still missing. CHANGE: better
+
+1. Star emblem on cup: missing in yours at every frame; target shows a 5-point star on the cup body from ~0.53 s to 2.00 s (cup center ≈ x 275, y 155).
+2. Star particle burst: target pops ~6 orange stars around the trophy 0.93–1.43 s and fades them out by ~1.57 s; yours never emits them (region x 165–390, y 60–320).
+3. Cup outline: target's cup is a rounded bowl with two side handles over a thin stem and flared base; yours is a flat-topped chalice with no handles, a wider rim and a squarer base (x 200–350, y 110–270).
+4. Early growth: at 0.27 s the target already shows a small stemmed cup, while yours is still a bare nub and only catches up at ~0.40 s (and is then slightly oversized there).

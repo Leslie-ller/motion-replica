@@ -1,0 +1,5 @@
+CHANGE: better — "yours" restores the dark card, white title bar and red/green/teal bar stack that "previous" never drew (it only had the dots and floating bars); nothing got worse.
+
+1. Card grow-in, 0.40–1.20s: at 0.80s yours is just a ~10 px dark sliver at the bottom of the card area (≈x30–225, y≈205–225) and then snaps to full height by 1.20s; the target grows the card smoothly from the bottom edge (top ≈y150 at 0.80s → ≈y120 at 1.20s → ≈y25 by 1.56s).
+2. Three-dot menu, 1.20–1.56s: yours fades the dots in already at ≈1.20s (≈x50, y55); the target keeps the card clean at 1.20s and only fades the dots in around 1.5–1.9s.
+3. Bar widths, 3.16–5.92s: yours' green/teal bars are already near their final lengths at 3.16s (teal ≈x95–185) and then barely move; the target keeps extending them through ≈5.5s (teal ≈x95–140 at 3.16s → ≈x95–215 at 5.92s).

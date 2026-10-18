@@ -1,0 +1,6 @@
+About the same as "previous" — both match the target's plus→X spin and final X, and both still miss the opening ring and the 0.13s particle burst. CHANGE: same
+
+1. Start shape, 0.00–0.07s, center (150,150): target draws a *hollow dashed ring* (~12 short red arcs on a ~20 px circle); yours draws a solid ~12 px 6-arm asterisk, so the ring read is gone (previous was a faint ring — structurally closer here, just too dim/small).
+2. Burst/morph, 0.10–0.20s, ~(150,150): target is a compact red cross (~40 px) with ~8 discrete pink particle dots scattered 20–35 px out; yours is a symmetric 6-petal pale-pink flower (~45 px) with no separate particles — too radial, too pale, too wide.
+3. Rotation phase, 0.35–0.50s: target's plus is still only ~30–40° off vertical at 0.40s and becomes a clean X around ~0.55s; yours is already ~55–60° at 0.40s, i.e. the plus→X spin starts too early and runs ahead of target.
+4. Arm geometry at 0.27s: target's plus arms are thick (~12 px) with flat, squared ends; yours reads slightly thinner and softer, so the mid-morph cross looks less solid than target.

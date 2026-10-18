@@ -1,0 +1,6 @@
+Yours tracks the target's plus→X spin and final X, but mid-animation rotation runs ahead and scale tops out early, so it is slightly further from target than "previous". CHANGE: worse
+
+- Rotation, 0.27–0.45s: yours is already ~25–30° (near-diagonal plus at 150,150); target is only ~10–15° at 0.27s and ~35° at 0.40s — the spin should lag/ramp later.
+- Scale, 0.53–0.93s: yours hits full X size (~50px arms) by 0.53s and freezes; target's X keeps expanding through 0.67s→0.93s (0.67s X noticeably smaller than 0.93s).
+- Start glyph, 0.00–0.08s: yours is a hollow ring/annulus ~10px at (150,150); target is a tiny spiky burst with radiating points.
+- Motion blur, 0.13s: yours is a tight compact cluster with crisp cross arms; target's is a wider, fainter diffuse scatter with streaked arms.
