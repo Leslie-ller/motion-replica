@@ -1,0 +1,5 @@
+Yours is closer to the target than previous — the oversized orange confetti blob and the extra dark bar under the check at 1.77s are both gone — but the CTA button entrance regressed. CHANGE: better
+
+- Confetti burst (1.10–1.33s): yours' particles are ~2x too big and spread across the whole card (≈x105–255, y45–120); target keeps a tight ≈60x45 cluster hugging the check top at ≈(180, 95), only ≈x150–210, y70–115.
+- Confetti fade (1.33–1.77s): yours still shows a dense, wide cloud at 1.33s; the target thins to a few faint specks by 1.33s and is fully clear by 1.53s.
+- CTA button (1.77s): yours renders only a ~15px blue square at the card's bottom-left (≈x75–92, y250–265); target already shows the full rounded blue bar (≈x105–255, y215–232) centered under the text lines — yours arrives ~0.2s late and grows from the wrong corner.

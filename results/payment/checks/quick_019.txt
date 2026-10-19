@@ -1,0 +1,5 @@
+Yours is closer than previous — the 0.43s dot-in and the 0.87–1.10s check-pop/confetti now line up with the target, but the CTA reveal and card anchor still drift. CHANGE: better
+
+1. Blue CTA pill, 1.77–3.30s: yours draws it full-width and ~1.5x too tall (approx x115–245, y222–238, ~14px high) already at 1.77s; target's pill is ~8px high and wipes in from the left, reaching full width only around 2.4s.
+2. Card content anchor, 1.10–3.30s: yours' check + title + body sit ~10px higher in the card (check center approx y125 vs target y135), leaving a taller gap below the body; target keeps the block vertically centered with even top/bottom margins.
+3. Placeholder card, 0.23–0.43s: yours' gray rounded rect (approx x105–255, y105–255) stays at full ~15% opacity through 0.43s, so the entrance reads as a hard square; target's ghost is ~8–10% gray and has almost dissolved by 0.43s, with only the green dot remaining.

@@ -1,0 +1,24 @@
+{
+  "task": "payment",
+  "model": "deepseek-v4-1-flash-high (Devin, tools disabled)",
+  "condition": "loop",
+  "code": "current code",
+  "ended": "finish",
+  "actions_used": 24,
+  "versions": 20,
+  "wall_seconds": 1287.3,
+  "stats": {
+    "actions": {
+      "set_ir": 3,
+      "preview": 3,
+      "patch_ir": 17,
+      "finish": 1
+    },
+    "invalid_actions": 0,
+    "previews": 3,
+    "quick_checks": 18,
+    "reviews": 2,
+    "auto_reviews": 2,
+    "checker_seconds": 686.0
+  }
+}

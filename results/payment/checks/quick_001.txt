@@ -1,0 +1,7 @@
+Differences (canvas px, x right / y down, s):
+
+1. **Content-block outline** — yours draws a thin red/dark stroke around the bars+button group from ~1.33 s to 3.30 s (≈x 105–255, y 150–260). Target has no stroke anywhere: bars and button are flat, borderless shapes.
+2. **Blue button** — yours pops it in at 1.97 s at ~half width (≈x 150–215, y 235–250) and widens later. Target first shows it at 2.20 s already full width (≈x 95–265, y 245–262) and slightly lower/thicker.
+3. **Bar row timing/size** — yours turns the top bar dark at ~1.53 s and keeps the two dark bars narrow and high (≈x 120–240, y 155–190). Target keeps a short light-gray bar until 1.77 s, then swaps to wider dark bars (≈x 105–255, y 165–200).
+
+Minor: card scale-up finishes ~0.43 s in yours vs ~0.55 s in target, and yours' 0.67 s green dot is ~20 % smaller.

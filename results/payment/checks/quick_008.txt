@@ -1,0 +1,6 @@
+**Yours is a bit further from the target than previous** — the second half improved slightly (button fill starts ~0.2 s earlier and the fill wipe is smoother), but the whole pop/check phase now lags the target by ~0.25 s, which previous had matched. CHANGE: worse
+
+- **Confetti burst** — yours 1.10–1.77 s: only a few faint dots at 1.10 s, gone by 1.33 s; target fires ~12 bright multi-color particles spanning x≈110–250, y≈75–180 and keeps them visible through ~1.77 s.
+- **Circle→checkmark pop timing** — yours 0.43–1.33 s: still a tiny dot at 0.87 s and the check only reads at 1.10 s; target has a large green disc (center ≈180,125, r≈40) at 0.67 s and the white check inside it by 0.87 s.
+- **Card fade-in** — yours 0.23 s: cell is blank, card only appears at 0.43 s; target already shows a faint card (x≈55–305, y≈45–330) at 0.23 s.
+- **Bottom button** — yours 1.77–2.63 s: no button at all at 1.77 s and the blue fill only reaches full width at ~2.87 s; target shows the pill (x≈90–270, y≈265–300) already blue at 1.77–1.97 s.

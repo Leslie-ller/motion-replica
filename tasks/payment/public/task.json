@@ -1,0 +1,11 @@
+{
+  "w": 360,
+  "h": 360,
+  "fr": 30,
+  "ip": 0,
+  "op": 100,
+  "id": "payment",
+  "frames": 100,
+  "duration": 3.3333,
+  "background": "white"
+}

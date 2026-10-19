@@ -1,0 +1,6 @@
+Yours ≈ previous overall: the card, circle, check and confetti beats are essentially unchanged, the only visible regression is the lost seed dot at 0.43s, and I see no clear gain to offset it. CHANGE: same
+
+1) Circle pop-in, 0.43–0.67s — at 0.43s yours' card is empty; target shows a tiny green seed (~3 px at x≈178, y≈150) that then grows, and by 0.67s target's disc (center ≈180,165, r≈38 px) is noticeably larger than yours' (r≈30 px).
+2) Blue button, 1.97–2.43s — target's pill is already full card width (x≈100–260, y≈252–276) at 2.20s; yours is still ~55–60% wide (ends x≈190) at 2.20s and only fills at 2.43s, so the grow-in is ~0.2s late.
+3) Card content fade, 1.10–1.33s — target's bars/text are still fading in (top bar mid-gray at 1.10s, second bar arriving ~1.33s); yours already shows a full-dark bar and a near-complete text stack at 1.10s.
+Coordinates are eyeballed from the 3×-downscaled filmstrip cells, so treat the pixel figures as approximate.

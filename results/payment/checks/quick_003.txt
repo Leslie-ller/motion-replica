@@ -1,0 +1,5 @@
+yours is closer to the target than previous — the disc now scales in and the bottom blue bar now appears in the right window, but the checkmark still lands too early. CHANGE: better
+
+1. Green disc + check — 0.6–0.9s: yours draws the white check at 0.67s; the target is still a plain solid green disc at 0.67s and only shows the check at 0.87s (check ~0.2s early).
+2. Bottom blue bar — 1.8–2.3s: at 1.97s the target bar is already near full card width (~center x 180, y 305); yours is only a small blue stub at 1.97s and reaches full width at ~2.2s (grows too slowly / fills late).
+3. Disc scale-in — 0.40–0.50s: at 0.43s the target is a barely visible ~2px dot at card center; yours is already a distinct ~8–10px green circle (starts too large / grows too fast).

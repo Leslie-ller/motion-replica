@@ -1,0 +1,5 @@
+yours is closer to the target than previous — better: the stray blue chip at the card's bottom-left (2.20s–3.07s) and the over-thick text bars are gone, and the CTA button is now full-width from 1.97s; worse: the confetti burst at 1.10–1.33s has disappeared. CHANGE: better
+
+1. Confetti burst — 1.10s & 1.33s, around the check (x≈150–215, y≈75–125): yours draws a bare green check; target sprays ~10 small red/yellow/green/blue particles above and beside it, still visible at 1.33s and gone by 1.53s.
+2. Body text bars — 1.10s–1.53s (x≈150–215, y≈150–190): target stacks a long bar over a shorter one (gray at 1.10s, black by 1.33s) then two thin gray lines; yours renders only the top bar, so the card reads half-empty.
+3. Green check disc — 0.67s–1.53s (x≈155–205, y≈130–180): target's disc is larger (~50 px) with a fat white tick; yours is a touch smaller/thinner, so the icon reads weaker than target.

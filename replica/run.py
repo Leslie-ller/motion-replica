@@ -130,6 +130,7 @@ def main():
     p.add_argument('--steps', type=int, default=24)
     p.add_argument('--minutes', type=float, default=25)
     a = p.parse_args()
+    a.out = a.out.resolve()
     proxy = Proxy()
     try:
         r = run(a.model, a.condition, ROOT / 'tasks' / a.task, a.out, proxy, a.steps, a.minutes)

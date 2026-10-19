@@ -1,0 +1,6 @@
+"yours" is slightly closer to the target than "previous" — the blue button now appears earlier and widens sooner, matching the target's faster grow-in; the confetti spread and the body-text density are still about where they were. CHANGE: better
+
+- Confetti burst (1.10–1.53s): target throws ~12 particles across x≈90–270, y≈55–135 that have faded out by ~1.45s; yours shows only ~6 small dots clustered right above the check (x≈140–220, y≈70–110), with a few still visible at 1.53s.
+- Body text block (1.33–3.30s): target reveals 4 gray lines at y≈205–258 (widths ≈200/170/190/120 px) as the card fills; yours shows only 3 shorter lines that start later, so the lower card stays emptier.
+- Blue button growth (1.77–2.63s): target's pill is already ≈40% of card width at 1.77s (x≈60–150) and near-full by 2.43s; yours is only a ~15% nub at 1.77s and does not reach full width until ~2.87s.
+- Check icon (0.67–1.33s): target's disc is ~60 px diameter centered near (180, 115) and shifts up to y≈100 as confetti fires; yours stays slightly smaller and lower throughout.

@@ -1,0 +1,19 @@
+**Visible differences (most important first)**
+
+1. **Green circle — size / appearance time.** Centre ≈ (180, 155). 0.47–0.85 s. Yours is already a full circle of ~34 px diameter at 0.50 s and stays that size. Target shows only a ~6 px dot at 0.50 s, growing to ~28–30 px by 0.60 s. Yours appears too early and too large.
+
+2. **Circle → checkmark morph timing.** 0.70–0.90 s. Target's circle starts shrinking/deforming at ~0.70 s and is a complete check by 0.83 s. Yours is still a plain circle at 0.83 s (only a small notch) and only becomes a check at ~0.90 s — roughly 0.07–0.10 s late.
+
+3. **Green checkmark size after 0.90 s.** ~(180, 155), 0.90–3.30 s. Yours' green shape is consistently a few pixels larger than the target's (the motion chart shows yours' green "visible size" above the target's for the whole clip).
+
+4. **Content block row order.** 1.10–3.30 s, dark bar ≈ y 186–198, x 114–240. In yours a light‑gray text line is drawn *above* the dark heading bar; in the target the dark heading bar is the top row of the content block and the light lines appear only below it.
+
+5. **Blue button fill time.** y ≈ 264–282, x ≈ 84–276. Target's bar is fully blue by 2.10 s; yours is still dark at 2.03 s, only partly blue at 2.10 s, and fully blue at 2.17 s — about one frame late.
+
+6. **Card scale‑in speed.** 0.07–0.20 s. At 0.13 s the target's card already spans ≈ x 60–300, y 75–285, while yours is still ≈ x 90–270, y 90–270; yours catches up only by 0.20 s, so its early growth is slower.
+
+7. **Heading bar fade‑in.** 1.07–1.27 s. Target's heading bar is still mid‑gray at 1.13 s and reaches near‑black at ~1.27 s; yours is already dark by 1.13 s.
+
+8. **Confetti colours.** 0.97–1.20 s around (180, 130). Target's burst contains blue particles (blue curve present ~0.90–1.25 s); in yours the blue curve only starts at ~1.55 s, i.e. the blue confetti dot appears missing/smaller.
+
+REMAINING: yes

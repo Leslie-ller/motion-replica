@@ -97,7 +97,7 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:4px}
     <div class="transport" id="res-transport"></div>
     <div class="meta" id="res-meta"></div>
   </div>
-  <p class="note">左边是 After Effects 渲染的目标，右边是 Agent 交付的动画。画面同步播放，打开时停在最后一帧，每轮在最后一帧停 1.5 秒。模型是 DeepSeek V4.1 Flash，经 Devin 客户端调用，禁用全部工具。三个结果是从同一框架的多次运行里挑出来的；浏览器窗口用的是当前代码，奖杯和叉号跑在加入“自动完整检查”之前。</p>
+  <p class="note">左边是目标，右边是 Agent 交付的动画。画面同步播放，打开时停在最后一帧，每轮在最后一帧停 1.5 秒。模型是 DeepSeek V4.1 Flash，经 Devin 客户端调用，禁用全部工具。三个结果是从同一框架的多次运行里挑出来的；浏览器窗口和支付卡片用的是当前代码，叉号跑在加入“自动完整检查”之前。支付卡片是自制任务，目标帧由预览渲染；另外两个来自 LottieFiles，目标帧是 After Effects 渲染。</p>
 </section>
 
 <section aria-labelledby="h-how">
@@ -176,19 +176,20 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:4px}
   <ul>
     <li><b>结果不稳定。</b>同一个任务多次运行，质量差别很大；同一框架下浏览器窗口跑了 3 次，其中一次面板偏出了画布。</li>
     <li><b>主 Agent 前期爱整段重写。</b>第一次完整检查之前常常反复 <code>set_ir</code> 重写，检查之后才转成按意见 <code>patch_ir</code>。</li>
+    <li><b>复杂形状画不好。</b>奖杯（14 个图层、26 条自由路径）上，检查 Agent 在 15 次快检里反复指出杯身五角星缺失、星星爆发太小，主 Agent 却整段重写了 11 次，每次把做对的部分又改丢，最后用完动作也没补上。元素多但形状规整的动效（浏览器窗口、支付卡片）要稳得多。</li>
     <li><b>子集有边界。</b>圆形旗帜要用路径一块块画出被圆裁切的扇形；子集不提供蒙版，Agent 算不出这种几何，只画出了方形旗帜。</li>
     <li><b>检查有成本。</b>一次运行 13–21 分钟（上限 25 分钟），其中检查 Agent 占 6–10 分钟。</li>
   </ul>
 </section>
 
 <footer>
-  <span>参考动效：airbnb/lottie-android 的 snapshot-tests（仓库 Apache-2.0），原作者为 LottieFiles 创作者。参考帧是参考答案在 After Effects 26 里的真实渲染。</span>
+  <span>参考动效：浏览器窗口、叉号等来自 airbnb/lottie-android 的 snapshot-tests（仓库 Apache-2.0），原作者为 LottieFiles 创作者，参考帧是参考答案在 After Effects 26 里的真实渲染；支付卡片由 <code>tools/payment_card.py</code> 生成，参考帧由预览渲染。</span>
   <span>每一版动画、每一次检查的图片和原话、主 Agent 的逐步对话都保存在项目的 results/ 目录。</span>
 </footer>
 </div>
 
 <script>
-const DATA = {"tasks": [{"id": "browser", "name": "浏览器窗口", "w": 160, "h": 160, "cols": 10, "n": 149, "fps": 25.0, "duration": 5.96, "frames": 149, "target": "sprites/browser-target.webp", "result": "sprites/browser-result.webp", "actions": 23, "versions": 15, "ended": "finish", "quick": 13, "reviews": 2}, {"id": "trophy", "name": "奖杯", "w": 220, "h": 160, "cols": 10, "n": 60, "fps": 29.9700012207031, "duration": 2.002, "frames": 60, "target": "sprites/trophy-target.webp", "result": "sprites/trophy-result.webp", "actions": 24, "versions": 15, "ended": "budget", "quick": 15, "reviews": 0}, {"id": "x_pop", "name": "叉号弹出", "w": 160, "h": 160, "cols": 10, "n": 60, "fps": 30.0, "duration": 2.0, "frames": 120, "target": "sprites/x_pop-target.webp", "result": "sprites/x_pop-result.webp", "actions": 24, "versions": 21, "ended": "finish", "quick": 21, "reviews": 0}], "iterations": {"id": "browser", "name": "浏览器窗口", "w": 160, "h": 160, "cols": 10, "n": 149, "fps": 25.0, "duration": 5.96, "frames": 149, "target": "sprites/browser-target.webp", "result": "sprites/browser-result.webp", "actions": 23, "versions": [{"v": 1, "sprite": "sprites/browser-v1.webp"}, {"v": 4, "sprite": "sprites/browser-v4.webp"}, {"v": 8, "sprite": "sprites/browser-v8.webp"}, {"v": 15, "sprite": "sprites/browser-v15.webp"}], "ended": "finish", "quick": 13, "reviews": 2}};
+const DATA = {"tasks": [{"id": "browser", "name": "浏览器窗口", "w": 160, "h": 160, "cols": 10, "n": 149, "fps": 25.0, "duration": 5.96, "frames": 149, "target": "sprites/browser-target.webp", "result": "sprites/browser-result.webp", "actions": 23, "versions": 15, "ended": "finish", "quick": 13, "reviews": 2, "source": "After Effects"}, {"id": "payment", "name": "支付卡片", "w": 160, "h": 160, "cols": 10, "n": 100, "fps": 30.0, "duration": 3.3333, "frames": 100, "target": "sprites/payment-target.webp", "result": "sprites/payment-result.webp", "actions": 24, "versions": 20, "ended": "finish", "quick": 18, "reviews": 2, "source": "预览"}, {"id": "x_pop", "name": "叉号弹出", "w": 160, "h": 160, "cols": 10, "n": 60, "fps": 30.0, "duration": 2.0, "frames": 120, "target": "sprites/x_pop-target.webp", "result": "sprites/x_pop-result.webp", "actions": 24, "versions": 21, "ended": "finish", "quick": 21, "reviews": 0, "source": "After Effects"}], "iterations": {"id": "browser", "name": "浏览器窗口", "w": 160, "h": 160, "cols": 10, "n": 149, "fps": 25.0, "duration": 5.96, "frames": 149, "target": "sprites/browser-target.webp", "result": "sprites/browser-result.webp", "actions": 23, "versions": [{"v": 1, "sprite": "sprites/browser-v1.webp"}, {"v": 4, "sprite": "sprites/browser-v4.webp"}, {"v": 8, "sprite": "sprites/browser-v8.webp"}, {"v": 15, "sprite": "sprites/browser-v15.webp"}], "ended": "finish", "quick": 13, "reviews": 2, "source": "After Effects"}};
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sheets = {};
 function loadSheet(src, onload){ if(!sheets[src]){ const im = new Image(); im.src = src; sheets[src] = im; } sheets[src].addEventListener('load', onload); return sheets[src]; }
@@ -236,7 +237,7 @@ const tabs = document.getElementById('res-tabs'), meta = document.getElementById
 const ENDED = {finish:'自己交付', budget:'用完动作预算', deadline:'到时限'};
 function selectTask(t){
   [...tabs.children].forEach(b => b.setAttribute('aria-pressed', b.dataset.id === t.id));
-  res.load(t, [['目标（After Effects）', t.target], ['Agent 结果', t.result]]);
+  res.load(t, [[`目标（${t.source}）`, t.target], ['Agent 结果', t.result]]);
   meta.innerHTML = `<span><b>${t.frames}</b> 帧 · <b>${t.duration.toFixed(2)}</b> s</span><span><b>${t.actions}</b> 步 · ${ENDED[t.ended] || t.ended}</span>`
     + `<span><b>${t.versions}</b> 个版本</span><span><b>${t.quick}</b> 次快检 · <b>${t.reviews}</b> 次完整检查</span>`;
 }

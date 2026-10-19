@@ -1,0 +1,5 @@
+**Yours is closer to the target than previous** — the 0.43s badge dot, the 0.67s plain green disc (previous already showed the check) and the lighter card fade-in now match, and the confetti is closer; the regression is the CTA button, which now starts and finishes early. CHANGE: better
+
+- **CTA button, 1.77–2.43s**: yours already shows a small blue chip at the card's bottom-left (~x 105, y 270) at 1.77s and the bar is full width by 2.20s; target has no button at 1.77s, ~half width at 1.97s, ~75% at 2.20s and full only at ~2.43s — shift the whole grow ~0.2–0.25s later.
+- **Text block reveal, 1.10–1.33s**: yours' dark header bar (~x 105–195, y ≈ 200) and the gray line under it are already longer than target's at 1.10s; target grows the bar and each gray line from short bars in staggered order, so yours' paragraph reveal runs a beat ahead.
+- **Confetti, 1.10s**: yours' particles sit in a tight cluster over the badge (~x 180, y 130); target sprays smaller dots in a wider arc that reaches above the card's top edge (y < 60) and is gone by 1.33s.

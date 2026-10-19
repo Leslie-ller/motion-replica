@@ -4,11 +4,11 @@
 
 一个 Agent 负责写动画；另一个独立的检查 Agent（同一个模型、全新会话）只看画面，告诉它哪里不像、差在什么时间。整个闭环里没有任何分数。
 
-| 浏览器窗口（6 s，149 帧） | 奖杯（2 s，60 帧） | 叉号弹出（2 s，120 帧） |
+| 浏览器窗口（6 s，149 帧） | 支付卡片（3.3 s，100 帧） | 叉号弹出（2 s，120 帧） |
 |---|---|---|
-| ![browser](docs/media/browser.gif) | ![trophy](docs/media/trophy.gif) | ![x_pop](docs/media/x_pop.gif) |
+| ![browser](docs/media/browser.gif) | ![payment](docs/media/payment.gif) | ![x_pop](docs/media/x_pop.gif) |
 
-左边是目标（AE 渲染），右边是 Agent 的结果。模型：DeepSeek V4.1 Flash，经 Devin 客户端调用，禁用全部工具。
+左边是目标，右边是 Agent 的结果。浏览器窗口和叉号的目标是 AE 渲染；支付卡片是自制任务，目标由预览渲染。模型：DeepSeek V4.1 Flash，经 Devin 客户端调用，禁用全部工具。
 
 ## 怎么工作
 
@@ -82,11 +82,12 @@ lottie-web 和 AE 对同一份 Lottie 的求值并不完全相同。例如带空
 
 ## 结果与局限
 
-[`results/`](results) 里是上面三个动效的完整运行记录，是从同一框架的多次运行里挑出来的。浏览器窗口用的是当前代码；奖杯和叉号是在加入“自动完整检查”之前跑的，其余机制相同。
+[`results/`](results) 里是上面三个动效和奖杯的完整运行记录，是从同一框架的多次运行里挑出来的。浏览器窗口和支付卡片用的是当前代码；奖杯和叉号是在加入“自动完整检查”之前跑的，其余机制相同。
 
 - **检查 Agent 是有效的**：它能指出入场时间、缓动、元素先后、位置偏移这类只看几帧静止画面看不出来的问题，说法具体到像素和秒。
 - **结果不稳定**：同一个任务多次运行，质量差别很大（同一框架下浏览器窗口 3 次运行，一次面板偏出画布）。
 - **主 Agent 前期爱整段重写**：第一次完整检查之前，常常反复 `set_ir` 重写，检查之后才转成按意见 `patch_ir`。
+- **复杂形状画不好**：奖杯（14 个图层、26 条自由路径）上，检查 Agent 在 15 次快检里反复指出杯身五角星缺失、星星爆发太小，主 Agent 却整段重写了 11 次，每次把做对的部分又改丢，用完 24 步也没补上（[`results/trophy`](results/trophy)）。元素多但形状规整的动效（浏览器窗口、支付卡片）要稳得多。
 - **子集有边界**：圆形旗帜（uk）要用路径一块块画出被圆裁切的扇形；子集不提供蒙版，Agent 算不出这种几何，只画出了方形旗帜。
 - 一次运行 13–21 分钟（上限 25 分钟），其中检查 Agent 占 6–10 分钟。
 
@@ -104,7 +105,8 @@ replica/
   prompts.py    提示词
   run.py        跑一次；batch.py 并行跑多次；verify.py 交付物进 AE 验收
   vendor/       AE 构建脚本、子集规范化、预览适配器、AE 单实例派发
-tasks/          5 个动效任务（参考帧为 AE 26 渲染；hidden/ 为参考答案，Agent 看不到）
+tasks/          6 个动效任务（hidden/ 为参考答案，Agent 看不到）
+tools/          payment_card.py：生成自制的支付卡片任务
 results/        展示用的完整运行记录
 tests/          selftest：用脚本化会话端到端检查全部机制
 docs/           README 图片与生成脚本
@@ -125,3 +127,5 @@ python3 docs/build_media.py                        # 重新生成 README 图片
 ## 任务素材
 
 5 个动效来自 [lottie-android](https://github.com/airbnb/lottie-android) 的 `snapshot-tests/.../lottiefiles`（仓库 Apache-2.0，原作者为 LottieFiles 创作者）：加载波浪、浏览器窗口、奖杯、圆形旗帜、叉号弹出。参考帧是参考答案在 AE 26 里的真实渲染。
+
+支付卡片是自制任务（`python3 tools/payment_card.py` 生成）：16 个图层，只用圆角矩形、圆和一条对勾折线，动画全部是图层变换，复杂度来自元素的先后和缓动。它的参考帧由预览渲染，没有经过 AE。

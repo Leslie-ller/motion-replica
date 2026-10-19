@@ -1,0 +1,5 @@
+yours is closer to target than previous: the gray halo/offset panel behind the check (visible in previous at 1.10–1.77s) is gone, and the 1.10s confetti burst now reads like the target; the blue button still arrives slightly early. CHANGE: better
+
+1. Confetti burst — 1.10s: target scatters ~10 dots widely across ≈x 55–305, y 35–145 with orange/red mixed in; yours keeps fewer, smaller dots hugging the check (≈x 145–260, y 60–150), so the burst looks thin and late in spreading.
+2. Blue button — 1.97–2.20s: yours already shows a small blue sliver at 1.97s (≈x 165–205, y 265–285); target is empty there and pops a full-width pill only at 2.20s (≈x 105–250, y 265–290).
+3. Card placeholder — 0.23–0.43s: target's light-gray rounded card (≈x 110–250, y 30–300) is clearly visible at 0.23s and shrinks to a single tiny dot at 0.43s; yours renders it fainter/smaller at 0.23s, so the fade-in reads weaker.

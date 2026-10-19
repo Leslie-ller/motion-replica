@@ -1,0 +1,5 @@
+Yours is slightly further from the target than previous — the check/bar phase still matches, but the bottom blue bar now starts later and grows slower than in previous, and the early placeholder square is still too dark. CHANGE: worse
+
+1. Blue progress bar — 1.9–2.9 s: target already has a ~40%-wide bar at 1.97 s (x≈100–260, y≈265–280) and full width by ≈2.6 s; yours has none at 1.97 s, is ~30% narrower at 2.2–2.6 s, and only fills at ≈2.9 s (~0.25 s late).
+2. Placeholder square opacity — 0.2–0.5 s: at 0.23 s the target's rounded square is barely visible (≈#F2F2F2, x≈95–265, y≈55–150); yours draws it clearly gray (≈#E6E6E6), i.e. the fade-in runs ~0.2 s ahead.
+3. Confetti burst — 1.0–1.25 s: target sprays many colored dots widely above the card (x≈120–320, y≈10–75); yours keeps a smaller, tighter cluster (x≈150–280, y≈25–60), so the burst reads weaker.

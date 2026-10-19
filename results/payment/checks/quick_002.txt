@@ -1,0 +1,6 @@
+"yours" is a mixed bag: the too-early blue button is fixed, but the card-in and confetti regressed — roughly a wash, slightly better. CHANGE: better
+
+- Card scale-in, 0.23–0.43s: yours' card is still small (~x 130–280, y 130–260) at 0.23s; target's card is already nearly full-frame (~x 45–315, y 50–310) by 0.23s and shows a green speck at 0.43s.
+- Confetti, 0.87–1.53s: yours starts the burst late (first dots 1.10s, none at 0.87s) and still has dots at 1.33s and 1.53s; target bursts 0.87–1.10s (~x 120–240, y 35–90) and is clean from 1.33s on.
+- Blue button, 2.20s: yours' button is only ~40% of card width (~x 130–230) and goes full ~2.43s; target is already ~60% (~x 100–260) at 2.20s, full by 2.43s.
+- Text rows, 1.77–3.30s: yours' gray placeholder lines are slightly narrower/shorter than target's, leaving the lower card area emptier around y 250–300.

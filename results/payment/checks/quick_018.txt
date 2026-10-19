@@ -1,0 +1,5 @@
+Yours is further from the target than previous: the early check dot and the blue CTA bar both slipped to later times, and the confetti lingers. CHANGE: worse
+
+- Green dot, 0.43s: yours shows only the blank card; target (and previous) already show a small green dot near the card top (~x178, y120) seeding the check grow-in — yours' check effectively starts ~0.2s late.
+- Blue button bar, 1.77–2.10s: target and previous show the full-width blue bar (~x120–240, y225–240) from 1.77s; yours has no blue until ~2.20s (~0.4s late).
+- Confetti, 1.10–1.53s: target's burst is gone by 1.33s; yours still shows scattered colored dots around (x120–240, y90–140) at 1.33s and 1.53s (~0.3s too long).

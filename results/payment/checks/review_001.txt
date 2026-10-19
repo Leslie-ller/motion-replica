@@ -1,0 +1,17 @@
+1. **Blue bottom bar (blue underline)** — target grows it from the **left edge** starting ≈1.83 s, reaching full card width (x ≈85→275, y ≈215-228) by ≈2.10 s. Yours first shows blue at ≈1.90 s as a **short bar near the centre/right** (x ≈170-230) and it stays short through 2.17-2.47 s, only matching the target's full width around ≈2.60 s. So yours is late, anchored in the wrong place and grows far too slowly.
+
+2. **Green circle — size and vertical position** — target's circle is already ≈80 px across at 0.50-0.57 s (centre ≈(175, 100)); yours is only ≈55 px across at those times and catches up ≈0.10 s later (0.63-0.70 s). Its size curve also overshoots strongly in the target (spike at ≈0.7-0.9 s) while yours' peak is much smaller, and yours settles at a slightly smaller size and a few px higher (curve y ≈112 vs target ≈122).
+
+3. **White check mark inside the circle** — target's check is drawn by ≈0.70 s and complete at 0.77 s; yours still shows a plain green circle at 0.70-0.77 s and only reveals the check at ≈0.83 s. About 0.10 s late.
+
+4. **Thick black bar (dark navy)** — target's placeholder bar turns into the full-width black bar at ≈1.47 s, spanning x ≈85-275 at ≈14 px thick; yours turns black later (≈1.53-1.60 s) and stays **narrower and thinner** through 1.47-1.77 s (its dark-navy visible-size curve sits well below the target's).
+
+5. **Grey placeholder bar + the two text lines (1.13-1.40 s)** — target's grey bar reaches full card width by ≈1.33 s and the two grey lines under it are visible from ≈1.20 s; yours' grey bar is narrower/lighter and its text lines appear later and thinner (still faint at 1.27-1.33 s).
+
+6. **Confetti/sparkles around the check** — target's sparkles pop from ≈0.83 s; yours starts them at ≈0.90-0.97 s, slightly late and initially smaller/fewer.
+
+7. **Light card (rounded square)** — target's card is essentially full size by 0.20-0.27 s; yours is slightly smaller/narrower at 0.13-0.37 s and only catches up ≈0.37 s (curve: target reaches full size ≈0.6 s, yours ≈0.7 s).
+
+8. **Green dot onset (0.37-0.43 s)** — target still shows only a tiny dark dot at 0.43 s; yours already shows a distinctly green dot at 0.43 s, i.e. the circle's colour/scale comes in slightly early before it then lags behind in size (see item 2).
+
+REMAINING: yes

@@ -1,0 +1,7 @@
+yours is closer to the target than previous — the 0.43s dot, the 1.10s two-bar state, and the 1.97s+ blue bar all track target while previous misses them. CHANGE: better
+
+- Confetti burst, 1.10–1.33s: yours throws only ~4 dots hugging the check icon (≈175,120) and is fully clear by 1.33s; target scatters 7–8 green/yellow/red dots out to x≈115–255, y≈75–140 and still holds 2 faint dots at 1.33s.
+- Blue progress bar, 1.97–2.63s: yours is already full card width (x≈78–282, y≈255) at 2.43s; target is ~60% at 1.97s, ~78% at 2.20s, ~90% at 2.43s and only reaches full width at 2.63s.
+- Placeholder card, 0.23s: yours' grey rounded rect is larger and lighter (≈x85–275, y95–265); target's is smaller/darker (≈x105–255, y110–250) and dims a step earlier.
+- Grey text lines, 1.53–1.77s: yours shows the third light-grey line already at 1.53s; target holds 2 grey + 1 light line until 1.77s, then adds the second light line.
+- Green disc, 0.67s: yours' disc is ~1.1× target's radius (≈19px vs ≈17px) and lands at the same centre, so it reads slightly heavy before the check appears.

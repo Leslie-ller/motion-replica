@@ -1,0 +1,5 @@
+**CHANGE: same** — "yours" matches the target's build order (dot → circle → check → confetti → text lines → blue button) about as well as "previous"; the confetti spread is a bit closer to the target, but the bold title bar now fires even earlier, so the two roughly cancel.
+
+- Bold title bar — 1.10–1.53 s: in "yours" the dark bar (≈x 95–205, y 178–190) is already near-black while the check is still small; the target shows only faint gray lines there and the bar reaches full darkness at ≈1.53–1.77 s (about 0.4 s late in "yours").
+- Blue button — 2.20–3.30 s: "yours" pops the blue pill in at 2.20 s (≈x 95–150, y 270–292) and jumps to full width; the target has no blue until 2.43 s, then grows it steadily to ≈x 95–265 by 3.30 s.
+- Confetti — 1.10–1.53 s: the target's burst spreads wide (≈x 120–250, y 60–110) and leaves stragglers visible at 1.33–1.53 s; "yours" keeps the dots clustered above the circle (≈x 165–215, y 70–100) and is clean by 1.33 s.

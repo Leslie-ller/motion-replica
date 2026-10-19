@@ -1,0 +1,5 @@
+Yours is closer than previous: the stray blue square at the card's bottom-left in "previous" (~1.77s) is gone, the text rows now match the target's dark/dark/light pattern from ~1.97s, and the button grows smoothly. CHANGE: better
+
+- **Check disc** (0.43–0.87s): yours already has the white check inside a small disc at 0.67s (≈x145–205, y30–85); the target shows only a plain, larger disc there (≈x140–215, y20–90) and draws the check at ~0.85s — yours is ~0.2s early and ~15% small.
+- **Confetti** (1.10–1.33s): yours' particles stay clustered on/above the check and a few red ones survive past 1.33s; the target's burst at 1.10s spreads wider (≈±80px around x180, y55) and is fully faded by ~1.30s.
+- **Blue button** (1.77s): yours is still short (≈x120–230, y250–272); the target's already spans nearly the card's full inner width (≈x110–250, y248–272), reaching that by ~1.77s rather than ~1.97s.

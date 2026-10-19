@@ -21,7 +21,8 @@ from replica.proxy import Proxy  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent
-TASKS = [('browser', '浏览器窗口'), ('trophy', '奖杯'), ('x_pop', '叉号弹出')]
+TASKS = [('browser', '浏览器窗口'), ('payment', '支付卡片'), ('x_pop', '叉号弹出')]
+PREVIEW_TARGETS = {'payment'}   # self-made task: its reference frames are preview renders, not AE
 ITER = ('browser', [1, 4, 8, 15])
 CELL_H, COLS = 160, 10
 IMAGES = {'checker_quick.webp': 'results/browser/checks/quick_004.png',
@@ -66,7 +67,8 @@ def main():
                      'fps': task['fr'] / step, 'duration': task['duration'], 'frames': len(times),
                      'target': f'sprites/{tid}-target.webp', 'result': f'sprites/{tid}-result.webp',
                      'actions': run['actions_used'], 'versions': run['versions'], 'ended': run['ended'],
-                     'quick': run['stats'].get('quick_checks', 0), 'reviews': run['stats'].get('reviews', 0)}
+                     'quick': run['stats'].get('quick_checks', 0), 'reviews': run['stats'].get('reviews', 0),
+                     'source': '预览' if tid in PREVIEW_TARGETS else 'After Effects'}
             data['tasks'].append(entry)
             if tid == ITER[0]:
                 versions = []

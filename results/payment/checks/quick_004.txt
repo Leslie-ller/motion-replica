@@ -1,0 +1,5 @@
+Yours is closer to the target than previous overall — the 0.67s plain green disc now matches (previous drew the checkmark ~0.2s early) and previous's stray blue fragments at 1.33s/1.97s are gone; from 0.87s on the card, badge, confetti and skeleton track the target closely. CHANGE: better
+
+1. Badge grow-in, 0.40–0.60s: yours is empty at 0.43s; target shows a ~12px green dot near (180,155) that grows into the ~75px disc by 0.67s (previous had a dot but ~2× too big and too high).
+2. Card height, 0.87–1.53s: yours' card reads ~8–10% taller than target's at the same times, so badge, skeleton lines and the bottom edge all sit a few px low; target's card grows more slowly.
+3. Blue bar, ~1.77s: target's bar is only ~65% of the card width and fills to full by ~2.2s; yours already looks full width at 1.77s.

@@ -1,0 +1,4 @@
+Closer than previous — the blue button no longer appears fully at 1.77 s and the confetti is a bit less clumped — but the button bar and confetti still differ. CHANGE: better
+1. Blue button bar, 1.77–2.20 s (x≈85–245, y≈455–470): yours grows a thin sliver from the left edge at 1.77 s, then keeps a bar that is thinner/lower with a faint extra rule beneath it; target shows no blue at 1.77 s and a full-width, thicker rounded bar flush in the card by 1.97 s.
+2. Confetti, 1.10 s (x≈645–735): yours keeps the particles in a tight arc left of the check; target scatters them wider, above and on both sides of the check.
+3. Card body text, 1.33–3.30 s (x≈85–160): yours' headline and body lines are shorter and sit lower, leaving more empty space at the card top; target's lines are longer, start higher under the check, and stop above the button.
