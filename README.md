@@ -84,6 +84,7 @@ lottie-web 和 AE 对同一份 Lottie 的求值并不完全相同。例如带空
 
 [`results/`](results) 里是上面三个动效和奖杯的完整运行记录，是从同一框架的多次运行里挑出来的。浏览器窗口和支付卡片用的是当前代码；奖杯和叉号是在加入“自动完整检查”之前跑的，其余机制相同。
 
+- **和一次生成的对照**（[`results/comparison`](results/comparison)，每个条件 3 次）：闭环在部分任务上明显改进了元素出现的时机（误差均值 0.16 s → 0.04 s），但形状和位置没有一致的提升。
 - **检查 Agent 是有效的**：它能指出入场时间、缓动、元素先后、位置偏移这类只看几帧静止画面看不出来的问题，说法具体到像素和秒。
 - **结果不稳定**：同一个任务多次运行，质量差别很大（同一框架下浏览器窗口 3 次运行，一次面板偏出画布）。
 - **主 Agent 前期爱整段重写**：第一次完整检查之前，常常反复 `set_ir` 重写，检查之后才转成按意见 `patch_ir`。
@@ -106,7 +107,7 @@ replica/
   run.py        跑一次；batch.py 并行跑多次；verify.py 交付物进 AE 验收
   vendor/       AE 构建脚本、子集规范化、预览适配器、AE 单实例派发
 tasks/          6 个动效任务（hidden/ 为参考答案，Agent 看不到）
-tools/          payment_card.py：生成自制的支付卡片任务
+tools/          payment_card.py 生成支付卡片任务；score.py、aspects.py 离线评分与对照
 results/        展示用的完整运行记录
 tests/          selftest：用脚本化会话端到端检查全部机制
 docs/           README 图片与生成脚本
