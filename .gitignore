@@ -3,3 +3,9 @@ __pycache__/
 runs/
 *.pyc
 .DS_Store
+
+# Local links and credentials
+/node_modules
+.env
+.env.*
+!.env.example

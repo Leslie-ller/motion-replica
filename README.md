@@ -130,3 +130,7 @@ python3 docs/build_media.py                        # 重新生成 README 图片
 5 个动效来自 [lottie-android](https://github.com/airbnb/lottie-android) 的 `snapshot-tests/.../lottiefiles`（仓库 Apache-2.0，原作者为 LottieFiles 创作者）：加载波浪、浏览器窗口、奖杯、圆形旗帜、叉号弹出。参考帧是参考答案在 AE 26 里的真实渲染。
 
 支付卡片是自制任务（`python3 tools/payment_card.py` 生成）：16 个图层，只用圆角矩形、圆和一条对勾折线，动画全部是图层变换，复杂度来自元素的先后和缓动。它的参考帧由预览渲染，没有经过 AE。
+
+## 许可
+
+原创项目代码采用 [Apache-2.0](LICENSE)。第三方动效样例及其衍生参考帧保留原作者权利与来源，见 [NOTICE](NOTICE)。运行依赖各自遵循其原有许可。
